@@ -1,0 +1,23 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title><h4>Log in to your account</h4></mat-card-title>
+    </mat-card-header>
+
+    <form class="example-form" [formGroup]="loginForm" (ngSubmit)="submit(loginForm)" novalidate>
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Enter your username" formControlName="Username" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Enter your password" type="password" formControlName="Password" required>
+        </mat-form-field>
+      </mat-card-content>
+
+      <button mat-stroked-button color="accent" class="btn-block">Login</button>
+    </form>
+  </mat-card>
+
+</div>

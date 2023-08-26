@@ -1,0 +1,95 @@
+version: '3.4'
+
+services:
+########################################################## microservices.demo.report.api ################################################################################
+  microservices.demo.report.api:
+    image: ${DOCKER_REGISTRY-}microservicesdemoreportapi
+    #container_name: Microservices.Demo.Product.Api
+    mem_limit: 256m
+    mem_reservation: 128M
+    cpus: 0.25
+    deploy:
+      replicas: 3
+    environment:      
+      - ASPNETCORE_URLS=http://::80
+    ports:
+      - 8085:80      
+    build:
+      context: .
+      dockerfile: app/Domain/Microservices.Demo.Report.API/Dockerfile
+    networks:
+      - backend
+    restart: on-failure
+########################################################## microservices.demo.product.api ################################################################################
+  microservices.demo.product.api:
+    image: ${DOCKER_REGISTRY-}microservicesdemoproductapi
+    #container_name: Microservices.Demo.Product.Api
+    mem_limit: 256m
+    mem_reservation: 128M
+    cpus: 0.25
+    deploy:
+      replicas: 2
+    environment:      
+      - ASPNETCORE_URLS=http://::80
+    ports:
+      - 80      
+    build:
+      context: .
+      dockerfile: app/Domain/Microservices.Demo.Product.API/Dockerfile
+    networks:
+      - backend
+    restart: on-failure
+########################################################## microservices.demo.pricing.api ################################################################################
+  microservices.demo.pricing.api:
+    image: ${DOCKER_REGISTRY-}microservicesdemopricingapi
+    #container_name: Microservices.Demo.Pricing.Api
+    mem_limit: 256m
+    mem_reservation: 128M
+    cpus: 0.25
+    deploy:
+      replicas: 2
+    environment:      
+      - ASPNETCORE_URLS=http://::80
+    ports:
+      - 80      
+    build:
+      context: .
+      dockerfile: app/Domain/Microservices.Demo.Pricing.API/Dockerfile
+    networks:
+      - backend
+    restart: on-failure
+########################################################## microservices.demo.policy.api #################################################################################
+  microservices.demo.policy.api:
+    image: ${DOCKER_REGISTRY-}microservicesdemopolicyapi
+    #container_name: Microservices.Demo.Policy.Api
+    mem_limit: 256m
+    mem_reservation: 128M
+    cpus: 0.25
+    deploy:
+      replicas: 2
+    environment:      
+      - ASPNETCORE_URLS=http://::80
+    ports:
+      - 80      
+    build:
+      context: .
+      dockerfile: app/Domain/Microservices.Demo.Policy.API/Dockerfile
+    networks:
+      - backend
+    restart: on-failure
+########################################################## Client Angular #################################################################################
+  microservices.demo.client.web:
+    container_name: microservices.demo.client.web
+    image: microservices.demo.client.web
+    build:
+      context: app/Client/microservices.demo.client.web
+      dockerfile: Dockerfile    
+    ports:
+      - 8081:80      
+    networks:
+      - backend   
+########################################################## networks #######################################################################################################
+networks:
+  backend:
+    name: backend
+    driver: bridge

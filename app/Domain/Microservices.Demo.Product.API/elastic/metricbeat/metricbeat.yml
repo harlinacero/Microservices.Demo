@@ -1,0 +1,10 @@
+metricbeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+output.elasticsearch:
+  hosts: ["http://microservices.demo.elasticsearch:9200"]
+  #username: "elastic"
+  #password: "<password>"
+  # If using Elasticsearch's default certificate
+  #ssl.ca_trusted_fingerprint: "<es cert fingerprint>"
+setup.kibana:
+  host: "http://microservices.demo.kibana:5601"

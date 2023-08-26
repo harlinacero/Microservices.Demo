@@ -1,0 +1,2929 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "discovery-server-test",
+        "directory": "D:\\GitHub\\Microservices202209\\Taller\\app\\Infrastructure\\Microservices.Demo.DiscoveryServer",
+        "workspaceDir": "D:\\GitHub\\Microservices202209\\Taller\\app\\Infrastructure\\Microservices.Demo.DiscoveryServer",
+        "sources": [
+            "D:\\GitHub\\Microservices202209\\Taller\\app\\Infrastructure\\Microservices.Demo.DiscoveryServer\\src\\test\\java"
+        ],
+        "dependencies": [
+            "discovery-server"
+        ],
+        "classpath": [
+            "D:\\GitHub\\Microservices202209\\Taller\\app\\Infrastructure\\Microservices.Demo.DiscoveryServer\\target\\test-classes",
+            "D:\\GitHub\\Microservices202209\\Taller\\app\\Infrastructure\\Microservices.Demo.DiscoveryServer\\target\\classes",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-actuator\\2.7.6\\spring-boot-starter-actuator-2.7.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter\\2.7.6\\spring-boot-starter-2.7.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-logging\\2.7.6\\spring-boot-starter-logging-2.7.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\ch\\qos\\logback\\logback-classic\\1.2.11\\logback-classic-1.2.11.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\ch\\qos\\logback\\logback-core\\1.2.11\\logback-core-1.2.11.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-to-slf4j\\2.17.2\\log4j-to-slf4j-2.17.2.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-api\\2.17.2\\log4j-api-2.17.2.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\slf4j\\jul-to-slf4j\\1.7.36\\jul-to-slf4j-1.7.36.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\jakarta\\annotation\\jakarta.annotation-api\\1.3.5\\jakarta.annotation-api-1.3.5.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\yaml\\snakeyaml\\1.30\\snakeyaml-1.30.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-actuator-autoconfigure\\2.7.6\\spring-boot-actuator-autoconfigure-2.7.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-actuator\\2.7.6\\spring-boot-actuator-2.7.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-databind\\2.13.4.2\\jackson-databind-2.13.4.2.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-annotations\\2.13.4\\jackson-annotations-2.13.4.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-core\\2.13.4\\jackson-core-2.13.4.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\datatype\\jackson-datatype-jsr310\\2.13.4\\jackson-datatype-jsr310-2.13.4.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\micrometer\\micrometer-core\\1.9.6\\micrometer-core-1.9.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\hdrhistogram\\HdrHistogram\\2.1.12\\HdrHistogram-2.1.12.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\latencyutils\\LatencyUtils\\2.0.3\\LatencyUtils-2.0.3.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-web\\2.7.6\\spring-boot-starter-web-2.7.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-json\\2.7.6\\spring-boot-starter-json-2.7.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\datatype\\jackson-datatype-jdk8\\2.13.4\\jackson-datatype-jdk8-2.13.4.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\module\\jackson-module-parameter-names\\2.13.4\\jackson-module-parameter-names-2.13.4.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-tomcat\\2.7.6\\spring-boot-starter-tomcat-2.7.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-core\\9.0.69\\tomcat-embed-core-9.0.69.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-el\\9.0.69\\tomcat-embed-el-9.0.69.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-websocket\\9.0.69\\tomcat-embed-websocket-9.0.69.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-web\\5.3.24\\spring-web-5.3.24.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-beans\\5.3.24\\spring-beans-5.3.24.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-webmvc\\5.3.24\\spring-webmvc-5.3.24.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-aop\\5.3.24\\spring-aop-5.3.24.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-context\\5.3.24\\spring-context-5.3.24.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-expression\\5.3.24\\spring-expression-5.3.24.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-starter-netflix-eureka-server\\3.1.4\\spring-cloud-starter-netflix-eureka-server-3.1.4.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-starter\\3.1.5\\spring-cloud-starter-3.1.5.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-context\\3.1.5\\spring-cloud-context-3.1.5.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\security\\spring-security-crypto\\5.7.5\\spring-security-crypto-5.7.5.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-commons\\3.1.5\\spring-cloud-commons-3.1.5.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\security\\spring-security-rsa\\1.0.11.RELEASE\\spring-security-rsa-1.0.11.RELEASE.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\bouncycastle\\bcpkix-jdk15on\\1.69\\bcpkix-jdk15on-1.69.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\bouncycastle\\bcprov-jdk15on\\1.69\\bcprov-jdk15on-1.69.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\bouncycastle\\bcutil-jdk15on\\1.69\\bcutil-jdk15on-1.69.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-netflix-eureka-server\\3.1.4\\spring-cloud-netflix-eureka-server-3.1.4.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-freemarker\\2.7.6\\spring-boot-starter-freemarker-2.7.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\freemarker\\freemarker\\2.3.31\\freemarker-2.3.31.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-context-support\\5.3.24\\spring-context-support-5.3.24.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-netflix-eureka-client\\3.1.4\\spring-cloud-netflix-eureka-client-3.1.4.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\netflix\\eureka\\eureka-client\\1.10.17\\eureka-client-1.10.17.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\netflix\\netflix-commons\\netflix-eventbus\\0.3.0\\netflix-eventbus-0.3.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\netflix\\netflix-commons\\netflix-infix\\0.3.0\\netflix-infix-0.3.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\commons-jxpath\\commons-jxpath\\1.3\\commons-jxpath-1.3.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\joda-time\\joda-time\\2.3\\joda-time-2.3.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\antlr\\antlr-runtime\\3.4\\antlr-runtime-3.4.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\antlr\\stringtemplate\\3.2.1\\stringtemplate-3.2.1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\antlr\\antlr\\2.7.7\\antlr-2.7.7.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\commons\\commons-math\\2.2\\commons-math-2.2.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\thoughtworks\\xstream\\xstream\\1.4.18\\xstream-1.4.18.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\github\\x-stream\\mxparser\\1.2.2\\mxparser-1.2.2.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\xmlpull\\xmlpull\\1.1.3.1\\xmlpull-1.1.3.1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\javax\\ws\\rs\\jsr311-api\\1.1.1\\jsr311-api-1.1.1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\netflix\\servo\\servo-core\\0.12.21\\servo-core-0.12.21.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\jersey\\jersey-core\\1.19.1\\jersey-core-1.19.1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\jersey\\contribs\\jersey-apache-client4\\1.19.1\\jersey-apache-client4-1.19.1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\httpcomponents\\httpclient\\4.5.13\\httpclient-4.5.13.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\httpcomponents\\httpcore\\4.4.15\\httpcore-4.4.15.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\commons-codec\\commons-codec\\1.15\\commons-codec-1.15.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\commons-configuration\\commons-configuration\\1.10\\commons-configuration-1.10.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\commons-lang\\commons-lang\\2.6\\commons-lang-2.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\google\\inject\\guice\\4.1.0\\guice-4.1.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\codehaus\\jettison\\jettison\\1.4.0\\jettison-1.4.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\jersey\\jersey-servlet\\1.19.4\\jersey-servlet-1.19.4.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\jersey\\jersey-server\\1.19.4\\jersey-server-1.19.4.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\jersey\\jersey-client\\1.19.4\\jersey-client-1.19.4.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\netflix\\eureka\\eureka-core\\1.10.17\\eureka-core-1.10.17.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\woodstox\\woodstox-core\\6.2.1\\woodstox-core-6.2.1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\javax\\inject\\javax.inject\\1\\javax.inject-1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\dataformat\\jackson-dataformat-xml\\2.13.4\\jackson-dataformat-xml-2.13.4.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\codehaus\\woodstox\\stax2-api\\4.2.1\\stax2-api-4.2.1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-starter-loadbalancer\\3.1.5\\spring-cloud-starter-loadbalancer-3.1.5.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-loadbalancer\\3.1.5\\spring-cloud-loadbalancer-3.1.5.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\projectreactor\\reactor-core\\3.4.25\\reactor-core-3.4.25.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\reactivestreams\\reactive-streams\\1.0.4\\reactive-streams-1.0.4.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\projectreactor\\addons\\reactor-extra\\3.4.9\\reactor-extra-3.4.9.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-cache\\2.7.6\\spring-boot-starter-cache-2.7.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\stoyanr\\evictor\\1.0.0\\evictor-1.0.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\glassfish\\jaxb\\jaxb-runtime\\2.3.7\\jaxb-runtime-2.3.7.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\glassfish\\jaxb\\txw2\\2.3.7\\txw2-2.3.7.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\istack\\istack-commons-runtime\\3.0.12\\istack-commons-runtime-3.0.12.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\activation\\jakarta.activation\\1.2.2\\jakarta.activation-1.2.2.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-devtools\\2.7.6\\spring-boot-devtools-2.7.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot\\2.7.6\\spring-boot-2.7.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-autoconfigure\\2.7.6\\spring-boot-autoconfigure-2.7.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-test\\2.7.6\\spring-boot-starter-test-2.7.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-test\\2.7.6\\spring-boot-test-2.7.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-test-autoconfigure\\2.7.6\\spring-boot-test-autoconfigure-2.7.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\jayway\\jsonpath\\json-path\\2.7.0\\json-path-2.7.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\net\\minidev\\json-smart\\2.4.8\\json-smart-2.4.8.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\net\\minidev\\accessors-smart\\2.4.8\\accessors-smart-2.4.8.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\ow2\\asm\\asm\\9.1\\asm-9.1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\slf4j\\slf4j-api\\1.7.36\\slf4j-api-1.7.36.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\jakarta\\xml\\bind\\jakarta.xml.bind-api\\2.3.3\\jakarta.xml.bind-api-2.3.3.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\jakarta\\activation\\jakarta.activation-api\\1.2.2\\jakarta.activation-api-1.2.2.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\assertj\\assertj-core\\3.22.0\\assertj-core-3.22.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\hamcrest\\hamcrest\\2.2\\hamcrest-2.2.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter\\5.8.2\\junit-jupiter-5.8.2.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter-api\\5.8.2\\junit-jupiter-api-5.8.2.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\opentest4j\\opentest4j\\1.2.0\\opentest4j-1.2.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\platform\\junit-platform-commons\\1.8.2\\junit-platform-commons-1.8.2.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\apiguardian\\apiguardian-api\\1.1.2\\apiguardian-api-1.1.2.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter-params\\5.8.2\\junit-jupiter-params-5.8.2.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter-engine\\5.8.2\\junit-jupiter-engine-5.8.2.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\platform\\junit-platform-engine\\1.8.2\\junit-platform-engine-1.8.2.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\mockito\\mockito-core\\4.5.1\\mockito-core-4.5.1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\net\\bytebuddy\\byte-buddy\\1.12.19\\byte-buddy-1.12.19.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\net\\bytebuddy\\byte-buddy-agent\\1.12.19\\byte-buddy-agent-1.12.19.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\objenesis\\objenesis\\3.2\\objenesis-3.2.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\mockito\\mockito-junit-jupiter\\4.5.1\\mockito-junit-jupiter-4.5.1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\skyscreamer\\jsonassert\\1.5.1\\jsonassert-1.5.1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\vaadin\\external\\google\\android-json\\0.0.20131108.vaadin1\\android-json-0.0.20131108.vaadin1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-core\\5.3.24\\spring-core-5.3.24.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-jcl\\5.3.24\\spring-jcl-5.3.24.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-test\\5.3.24\\spring-test-5.3.24.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\xmlunit\\xmlunit-core\\2.9.0\\xmlunit-core-2.9.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-starter-sleuth\\3.1.5\\spring-cloud-starter-sleuth-3.1.5.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-aop\\2.7.6\\spring-boot-starter-aop-2.7.6.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\aspectj\\aspectjweaver\\1.9.7\\aspectjweaver-1.9.7.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-sleuth-autoconfigure\\3.1.5\\spring-cloud-sleuth-autoconfigure-3.1.5.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\aspectj\\aspectjrt\\1.9.7\\aspectjrt-1.9.7.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-sleuth-otel-autoconfigure\\1.1.0\\spring-cloud-sleuth-otel-autoconfigure-1.1.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-sleuth-instrumentation\\3.1.5\\spring-cloud-sleuth-instrumentation-3.1.5.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-sleuth-api\\3.1.5\\spring-cloud-sleuth-api-3.1.5.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-sleuth-otel\\1.1.0\\spring-cloud-sleuth-otel-1.1.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-extension-aws\\1.16.0\\opentelemetry-extension-aws-1.16.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\instrumentation\\opentelemetry-instrumentation-api-semconv\\1.18.0-alpha\\opentelemetry-instrumentation-api-semconv-1.18.0-alpha.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk-metrics\\1.16.0\\opentelemetry-sdk-metrics-1.16.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk-logs\\1.18.0-alpha\\opentelemetry-sdk-logs-1.18.0-alpha.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-semconv\\1.18.0-alpha\\opentelemetry-semconv-1.18.0-alpha.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk-common\\1.16.0\\opentelemetry-sdk-common-1.16.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk-trace\\1.16.0\\opentelemetry-sdk-trace-1.16.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk\\1.16.0\\opentelemetry-sdk-1.16.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk-extension-autoconfigure-spi\\1.16.0\\opentelemetry-sdk-extension-autoconfigure-spi-1.16.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\instrumentation\\opentelemetry-instrumentation-api\\1.18.0\\opentelemetry-instrumentation-api-1.18.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-extension-trace-propagators\\1.16.0\\opentelemetry-extension-trace-propagators-1.16.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-exporter-otlp-trace\\1.14.0\\opentelemetry-exporter-otlp-trace-1.14.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-exporter-otlp-common\\1.16.0\\opentelemetry-exporter-otlp-common-1.16.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\squareup\\okhttp3\\okhttp\\4.9.3\\okhttp-4.9.3.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\jetbrains\\kotlin\\kotlin-stdlib\\1.6.21\\kotlin-stdlib-1.6.21.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\jetbrains\\kotlin\\kotlin-stdlib-common\\1.6.21\\kotlin-stdlib-common-1.6.21.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\jetbrains\\annotations\\13.0\\annotations-13.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\grpc\\grpc-okhttp\\1.42.1\\grpc-okhttp-1.42.1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\grpc\\grpc-core\\1.42.1\\grpc-core-1.42.1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\grpc\\grpc-api\\1.42.1\\grpc-api-1.42.1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\grpc\\grpc-context\\1.42.1\\grpc-context-1.42.1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\google\\code\\gson\\gson\\2.9.1\\gson-2.9.1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\google\\android\\annotations\\4.1.1.4\\annotations-4.1.1.4.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\codehaus\\mojo\\animal-sniffer-annotations\\1.19\\animal-sniffer-annotations-1.19.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\google\\errorprone\\error_prone_annotations\\2.9.0\\error_prone_annotations-2.9.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\squareup\\okhttp\\okhttp\\2.7.4\\okhttp-2.7.4.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\squareup\\okio\\okio\\1.17.5\\okio-1.17.5.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\google\\guava\\guava\\30.1-android\\guava-30.1-android.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\google\\guava\\failureaccess\\1.0.1\\failureaccess-1.0.1.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\google\\guava\\listenablefuture\\9999.0-empty-to-avoid-conflict-with-guava\\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\google\\code\\findbugs\\jsr305\\3.0.2\\jsr305-3.0.2.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\org\\checkerframework\\checker-compat-qual\\2.5.5\\checker-compat-qual-2.5.5.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\com\\google\\j2objc\\j2objc-annotations\\1.3\\j2objc-annotations-1.3.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\perfmark\\perfmark-api\\0.23.0\\perfmark-api-0.23.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-api\\1.16.0\\opentelemetry-api-1.16.0.jar",
+            "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-context\\1.16.0\\opentelemetry-context-1.16.0.jar"
+        ],
+        "out": "D:\\GitHub\\Microservices202209\\Taller\\app\\Infrastructure\\Microservices.Demo.DiscoveryServer\\target",
+        "classesDir": "D:\\GitHub\\Microservices202209\\Taller\\app\\Infrastructure\\Microservices.Demo.DiscoveryServer\\target\\test-classes",
+        "resources": [
+            "D:\\GitHub\\Microservices202209\\Taller\\app\\Infrastructure\\Microservices.Demo.DiscoveryServer\\src\\test\\resources"
+        ],
+        "java": {
+            "options": [
+                "-g",
+                "-target",
+                "17",
+                "-source",
+                "17",
+                "-encoding",
+                "UTF-8"
+            ]
+        },
+        "test": {
+            "frameworks": [
+                {
+                    "names": [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs.runner.SpecsFramework",
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "utest.runner.Framework"
+                    ]
+                },
+                {
+                    "names": [
+                        "munit.Framework"
+                    ]
+                }
+            ],
+            "options": {
+                "excludes": [
+                    
+                ],
+                "arguments": [
+                    {
+                        "args": [
+                            "-v",
+                            "-a"
+                        ],
+                        "framework": {
+                            "names": [
+                                "com.novocode.junit.JUnitFramework"
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.4.8-hotspot",
+                "options": [
+                    
+                ]
+            },
+            "mainClass": [
+                
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "org.slf4j",
+                    "name": "slf4j-api",
+                    "version": "1.7.36",
+                    "artifacts": [
+                        {
+                            "name": "slf4j-api",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\slf4j\\slf4j-api\\1.7.36\\slf4j-api-1.7.36.jar"
+                        },
+                        {
+                            "name": "slf4j-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\slf4j\\slf4j-api\\1.7.36\\slf4j-api-1.7.36-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "commons-configuration",
+                    "name": "commons-configuration",
+                    "version": "1.10",
+                    "artifacts": [
+                        {
+                            "name": "commons-configuration",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\commons-configuration\\commons-configuration\\1.10\\commons-configuration-1.10.jar"
+                        },
+                        {
+                            "name": "commons-configuration",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\commons-configuration\\commons-configuration\\1.10\\commons-configuration-1.10-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.cloud",
+                    "name": "spring-cloud-starter-sleuth",
+                    "version": "3.1.5",
+                    "artifacts": [
+                        {
+                            "name": "spring-cloud-starter-sleuth",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-starter-sleuth\\3.1.5\\spring-cloud-starter-sleuth-3.1.5.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.opentelemetry",
+                    "name": "opentelemetry-semconv",
+                    "version": "1.18.0-alpha",
+                    "artifacts": [
+                        {
+                            "name": "opentelemetry-semconv",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-semconv\\1.18.0-alpha\\opentelemetry-semconv-1.18.0-alpha.jar"
+                        },
+                        {
+                            "name": "opentelemetry-semconv",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-semconv\\1.18.0-alpha\\opentelemetry-semconv-1.18.0-alpha-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.ow2.asm",
+                    "name": "asm",
+                    "version": "9.1",
+                    "artifacts": [
+                        {
+                            "name": "asm",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\ow2\\asm\\asm\\9.1\\asm-9.1.jar"
+                        },
+                        {
+                            "name": "asm",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\ow2\\asm\\asm\\9.1\\asm-9.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.micrometer",
+                    "name": "micrometer-core",
+                    "version": "1.9.6",
+                    "artifacts": [
+                        {
+                            "name": "micrometer-core",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\micrometer\\micrometer-core\\1.9.6\\micrometer-core-1.9.6.jar"
+                        },
+                        {
+                            "name": "micrometer-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\micrometer\\micrometer-core\\1.9.6\\micrometer-core-1.9.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.opentelemetry",
+                    "name": "opentelemetry-sdk-trace",
+                    "version": "1.16.0",
+                    "artifacts": [
+                        {
+                            "name": "opentelemetry-sdk-trace",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk-trace\\1.16.0\\opentelemetry-sdk-trace-1.16.0.jar"
+                        },
+                        {
+                            "name": "opentelemetry-sdk-trace",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk-trace\\1.16.0\\opentelemetry-sdk-trace-1.16.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.cloud",
+                    "name": "spring-cloud-sleuth-instrumentation",
+                    "version": "3.1.5",
+                    "artifacts": [
+                        {
+                            "name": "spring-cloud-sleuth-instrumentation",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-sleuth-instrumentation\\3.1.5\\spring-cloud-sleuth-instrumentation-3.1.5.jar"
+                        },
+                        {
+                            "name": "spring-cloud-sleuth-instrumentation",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-sleuth-instrumentation\\3.1.5\\spring-cloud-sleuth-instrumentation-3.1.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "ch.qos.logback",
+                    "name": "logback-core",
+                    "version": "1.2.11",
+                    "artifacts": [
+                        {
+                            "name": "logback-core",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\ch\\qos\\logback\\logback-core\\1.2.11\\logback-core-1.2.11.jar"
+                        },
+                        {
+                            "name": "logback-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\ch\\qos\\logback\\logback-core\\1.2.11\\logback-core-1.2.11-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.logging.log4j",
+                    "name": "log4j-to-slf4j",
+                    "version": "2.17.2",
+                    "artifacts": [
+                        {
+                            "name": "log4j-to-slf4j",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-to-slf4j\\2.17.2\\log4j-to-slf4j-2.17.2.jar"
+                        },
+                        {
+                            "name": "log4j-to-slf4j",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-to-slf4j\\2.17.2\\log4j-to-slf4j-2.17.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-test-autoconfigure",
+                    "version": "2.7.6",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-test-autoconfigure",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-test-autoconfigure\\2.7.6\\spring-boot-test-autoconfigure-2.7.6.jar"
+                        },
+                        {
+                            "name": "spring-boot-test-autoconfigure",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-test-autoconfigure\\2.7.6\\spring-boot-test-autoconfigure-2.7.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.sun.jersey",
+                    "name": "jersey-servlet",
+                    "version": "1.19.4",
+                    "artifacts": [
+                        {
+                            "name": "jersey-servlet",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\jersey\\jersey-servlet\\1.19.4\\jersey-servlet-1.19.4.jar"
+                        },
+                        {
+                            "name": "jersey-servlet",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\jersey\\jersey-servlet\\1.19.4\\jersey-servlet-1.19.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-web",
+                    "version": "2.7.6",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-web",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-web\\2.7.6\\spring-boot-starter-web-2.7.6.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-web",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-web\\2.7.6\\spring-boot-starter-web-2.7.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-actuator",
+                    "version": "2.7.6",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-actuator",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-actuator\\2.7.6\\spring-boot-actuator-2.7.6.jar"
+                        },
+                        {
+                            "name": "spring-boot-actuator",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-actuator\\2.7.6\\spring-boot-actuator-2.7.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.platform",
+                    "name": "junit-platform-commons",
+                    "version": "1.8.2",
+                    "artifacts": [
+                        {
+                            "name": "junit-platform-commons",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\platform\\junit-platform-commons\\1.8.2\\junit-platform-commons-1.8.2.jar"
+                        },
+                        {
+                            "name": "junit-platform-commons",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\platform\\junit-platform-commons\\1.8.2\\junit-platform-commons-1.8.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.jupiter",
+                    "name": "junit-jupiter",
+                    "version": "5.8.2",
+                    "artifacts": [
+                        {
+                            "name": "junit-jupiter",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter\\5.8.2\\junit-jupiter-5.8.2.jar"
+                        },
+                        {
+                            "name": "junit-jupiter",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter\\5.8.2\\junit-jupiter-5.8.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.mockito",
+                    "name": "mockito-junit-jupiter",
+                    "version": "4.5.1",
+                    "artifacts": [
+                        {
+                            "name": "mockito-junit-jupiter",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\mockito\\mockito-junit-jupiter\\4.5.1\\mockito-junit-jupiter-4.5.1.jar"
+                        },
+                        {
+                            "name": "mockito-junit-jupiter",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\mockito\\mockito-junit-jupiter\\4.5.1\\mockito-junit-jupiter-4.5.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "jakarta.activation",
+                    "name": "jakarta.activation-api",
+                    "version": "1.2.2",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.activation-api",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\jakarta\\activation\\jakarta.activation-api\\1.2.2\\jakarta.activation-api-1.2.2.jar"
+                        },
+                        {
+                            "name": "jakarta.activation-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\jakarta\\activation\\jakarta.activation-api\\1.2.2\\jakarta.activation-api-1.2.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.security",
+                    "name": "spring-security-crypto",
+                    "version": "5.7.5",
+                    "artifacts": [
+                        {
+                            "name": "spring-security-crypto",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\security\\spring-security-crypto\\5.7.5\\spring-security-crypto-5.7.5.jar"
+                        },
+                        {
+                            "name": "spring-security-crypto",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\security\\spring-security-crypto\\5.7.5\\spring-security-crypto-5.7.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.opentelemetry",
+                    "name": "opentelemetry-sdk-logs",
+                    "version": "1.18.0-alpha",
+                    "artifacts": [
+                        {
+                            "name": "opentelemetry-sdk-logs",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk-logs\\1.18.0-alpha\\opentelemetry-sdk-logs-1.18.0-alpha.jar"
+                        },
+                        {
+                            "name": "opentelemetry-sdk-logs",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk-logs\\1.18.0-alpha\\opentelemetry-sdk-logs-1.18.0-alpha-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.opentelemetry.instrumentation",
+                    "name": "opentelemetry-instrumentation-api",
+                    "version": "1.18.0",
+                    "artifacts": [
+                        {
+                            "name": "opentelemetry-instrumentation-api",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\instrumentation\\opentelemetry-instrumentation-api\\1.18.0\\opentelemetry-instrumentation-api-1.18.0.jar"
+                        },
+                        {
+                            "name": "opentelemetry-instrumentation-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\instrumentation\\opentelemetry-instrumentation-api\\1.18.0\\opentelemetry-instrumentation-api-1.18.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.tomcat.embed",
+                    "name": "tomcat-embed-el",
+                    "version": "9.0.69",
+                    "artifacts": [
+                        {
+                            "name": "tomcat-embed-el",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-el\\9.0.69\\tomcat-embed-el-9.0.69.jar"
+                        },
+                        {
+                            "name": "tomcat-embed-el",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-el\\9.0.69\\tomcat-embed-el-9.0.69-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.netflix.netflix-commons",
+                    "name": "netflix-infix",
+                    "version": "0.3.0",
+                    "artifacts": [
+                        {
+                            "name": "netflix-infix",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\netflix\\netflix-commons\\netflix-infix\\0.3.0\\netflix-infix-0.3.0.jar"
+                        },
+                        {
+                            "name": "netflix-infix",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\netflix\\netflix-commons\\netflix-infix\\0.3.0\\netflix-infix-0.3.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.minidev",
+                    "name": "json-smart",
+                    "version": "2.4.8",
+                    "artifacts": [
+                        {
+                            "name": "json-smart",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\net\\minidev\\json-smart\\2.4.8\\json-smart-2.4.8.jar"
+                        },
+                        {
+                            "name": "json-smart",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\net\\minidev\\json-smart\\2.4.8\\json-smart-2.4.8-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.bouncycastle",
+                    "name": "bcpkix-jdk15on",
+                    "version": "1.69",
+                    "artifacts": [
+                        {
+                            "name": "bcpkix-jdk15on",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\bouncycastle\\bcpkix-jdk15on\\1.69\\bcpkix-jdk15on-1.69.jar"
+                        },
+                        {
+                            "name": "bcpkix-jdk15on",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\bouncycastle\\bcpkix-jdk15on\\1.69\\bcpkix-jdk15on-1.69-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.codehaus.woodstox",
+                    "name": "stax2-api",
+                    "version": "4.2.1",
+                    "artifacts": [
+                        {
+                            "name": "stax2-api",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\codehaus\\woodstox\\stax2-api\\4.2.1\\stax2-api-4.2.1.jar"
+                        },
+                        {
+                            "name": "stax2-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\codehaus\\woodstox\\stax2-api\\4.2.1\\stax2-api-4.2.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-actuator",
+                    "version": "2.7.6",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-actuator",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-actuator\\2.7.6\\spring-boot-starter-actuator-2.7.6.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-actuator",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-actuator\\2.7.6\\spring-boot-starter-actuator-2.7.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.cloud",
+                    "name": "spring-cloud-sleuth-otel",
+                    "version": "1.1.0",
+                    "artifacts": [
+                        {
+                            "name": "spring-cloud-sleuth-otel",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-sleuth-otel\\1.1.0\\spring-cloud-sleuth-otel-1.1.0.jar"
+                        },
+                        {
+                            "name": "spring-cloud-sleuth-otel",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-sleuth-otel\\1.1.0\\spring-cloud-sleuth-otel-1.1.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.guava",
+                    "name": "listenablefuture",
+                    "version": "9999.0-empty-to-avoid-conflict-with-guava",
+                    "artifacts": [
+                        {
+                            "name": "listenablefuture",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\google\\guava\\listenablefuture\\9999.0-empty-to-avoid-conflict-with-guava\\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.android",
+                    "name": "annotations",
+                    "version": "4.1.1.4",
+                    "artifacts": [
+                        {
+                            "name": "annotations",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\google\\android\\annotations\\4.1.1.4\\annotations-4.1.1.4.jar"
+                        },
+                        {
+                            "name": "annotations",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\google\\android\\annotations\\4.1.1.4\\annotations-4.1.1.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.latencyutils",
+                    "name": "LatencyUtils",
+                    "version": "2.0.3",
+                    "artifacts": [
+                        {
+                            "name": "LatencyUtils",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\latencyutils\\LatencyUtils\\2.0.3\\LatencyUtils-2.0.3.jar"
+                        },
+                        {
+                            "name": "LatencyUtils",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\latencyutils\\LatencyUtils\\2.0.3\\LatencyUtils-2.0.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.codehaus.mojo",
+                    "name": "animal-sniffer-annotations",
+                    "version": "1.19",
+                    "artifacts": [
+                        {
+                            "name": "animal-sniffer-annotations",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\codehaus\\mojo\\animal-sniffer-annotations\\1.19\\animal-sniffer-annotations-1.19.jar"
+                        },
+                        {
+                            "name": "animal-sniffer-annotations",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\codehaus\\mojo\\animal-sniffer-annotations\\1.19\\animal-sniffer-annotations-1.19-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.platform",
+                    "name": "junit-platform-engine",
+                    "version": "1.8.2",
+                    "artifacts": [
+                        {
+                            "name": "junit-platform-engine",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\platform\\junit-platform-engine\\1.8.2\\junit-platform-engine-1.8.2.jar"
+                        },
+                        {
+                            "name": "junit-platform-engine",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\platform\\junit-platform-engine\\1.8.2\\junit-platform-engine-1.8.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.hdrhistogram",
+                    "name": "HdrHistogram",
+                    "version": "2.1.12",
+                    "artifacts": [
+                        {
+                            "name": "HdrHistogram",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\hdrhistogram\\HdrHistogram\\2.1.12\\HdrHistogram-2.1.12.jar"
+                        },
+                        {
+                            "name": "HdrHistogram",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\hdrhistogram\\HdrHistogram\\2.1.12\\HdrHistogram-2.1.12-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.mockito",
+                    "name": "mockito-core",
+                    "version": "4.5.1",
+                    "artifacts": [
+                        {
+                            "name": "mockito-core",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\mockito\\mockito-core\\4.5.1\\mockito-core-4.5.1.jar"
+                        },
+                        {
+                            "name": "mockito-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\mockito\\mockito-core\\4.5.1\\mockito-core-4.5.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.squareup.okhttp3",
+                    "name": "okhttp",
+                    "version": "4.9.3",
+                    "artifacts": [
+                        {
+                            "name": "okhttp",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\squareup\\okhttp3\\okhttp\\4.9.3\\okhttp-4.9.3.jar"
+                        },
+                        {
+                            "name": "okhttp",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\squareup\\okhttp3\\okhttp\\4.9.3\\okhttp-4.9.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.cloud",
+                    "name": "spring-cloud-netflix-eureka-server",
+                    "version": "3.1.4",
+                    "artifacts": [
+                        {
+                            "name": "spring-cloud-netflix-eureka-server",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-netflix-eureka-server\\3.1.4\\spring-cloud-netflix-eureka-server-3.1.4.jar"
+                        },
+                        {
+                            "name": "spring-cloud-netflix-eureka-server",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-netflix-eureka-server\\3.1.4\\spring-cloud-netflix-eureka-server-3.1.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jetbrains.kotlin",
+                    "name": "kotlin-stdlib-common",
+                    "version": "1.6.21",
+                    "artifacts": [
+                        {
+                            "name": "kotlin-stdlib-common",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\jetbrains\\kotlin\\kotlin-stdlib-common\\1.6.21\\kotlin-stdlib-common-1.6.21.jar"
+                        },
+                        {
+                            "name": "kotlin-stdlib-common",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\jetbrains\\kotlin\\kotlin-stdlib-common\\1.6.21\\kotlin-stdlib-common-1.6.21-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.sun.jersey",
+                    "name": "jersey-server",
+                    "version": "1.19.4",
+                    "artifacts": [
+                        {
+                            "name": "jersey-server",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\jersey\\jersey-server\\1.19.4\\jersey-server-1.19.4.jar"
+                        },
+                        {
+                            "name": "jersey-server",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\jersey\\jersey-server\\1.19.4\\jersey-server-1.19.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.opentelemetry",
+                    "name": "opentelemetry-sdk-metrics",
+                    "version": "1.16.0",
+                    "artifacts": [
+                        {
+                            "name": "opentelemetry-sdk-metrics",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk-metrics\\1.16.0\\opentelemetry-sdk-metrics-1.16.0.jar"
+                        },
+                        {
+                            "name": "opentelemetry-sdk-metrics",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk-metrics\\1.16.0\\opentelemetry-sdk-metrics-1.16.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "commons-jxpath",
+                    "name": "commons-jxpath",
+                    "version": "1.3",
+                    "artifacts": [
+                        {
+                            "name": "commons-jxpath",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\commons-jxpath\\commons-jxpath\\1.3\\commons-jxpath-1.3.jar"
+                        },
+                        {
+                            "name": "commons-jxpath",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\commons-jxpath\\commons-jxpath\\1.3\\commons-jxpath-1.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.jupiter",
+                    "name": "junit-jupiter-engine",
+                    "version": "5.8.2",
+                    "artifacts": [
+                        {
+                            "name": "junit-jupiter-engine",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter-engine\\5.8.2\\junit-jupiter-engine-5.8.2.jar"
+                        },
+                        {
+                            "name": "junit-jupiter-engine",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter-engine\\5.8.2\\junit-jupiter-engine-5.8.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.slf4j",
+                    "name": "jul-to-slf4j",
+                    "version": "1.7.36",
+                    "artifacts": [
+                        {
+                            "name": "jul-to-slf4j",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\slf4j\\jul-to-slf4j\\1.7.36\\jul-to-slf4j-1.7.36.jar"
+                        },
+                        {
+                            "name": "jul-to-slf4j",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\slf4j\\jul-to-slf4j\\1.7.36\\jul-to-slf4j-1.7.36-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-context",
+                    "version": "5.3.24",
+                    "artifacts": [
+                        {
+                            "name": "spring-context",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-context\\5.3.24\\spring-context-5.3.24.jar"
+                        },
+                        {
+                            "name": "spring-context",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-context\\5.3.24\\spring-context-5.3.24-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.core",
+                    "name": "jackson-annotations",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-annotations",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-annotations\\2.13.4\\jackson-annotations-2.13.4.jar"
+                        },
+                        {
+                            "name": "jackson-annotations",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-annotations\\2.13.4\\jackson-annotations-2.13.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.tomcat.embed",
+                    "name": "tomcat-embed-core",
+                    "version": "9.0.69",
+                    "artifacts": [
+                        {
+                            "name": "tomcat-embed-core",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-core\\9.0.69\\tomcat-embed-core-9.0.69.jar"
+                        },
+                        {
+                            "name": "tomcat-embed-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-core\\9.0.69\\tomcat-embed-core-9.0.69-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-webmvc",
+                    "version": "5.3.24",
+                    "artifacts": [
+                        {
+                            "name": "spring-webmvc",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-webmvc\\5.3.24\\spring-webmvc-5.3.24.jar"
+                        },
+                        {
+                            "name": "spring-webmvc",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-webmvc\\5.3.24\\spring-webmvc-5.3.24-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.yaml",
+                    "name": "snakeyaml",
+                    "version": "1.30",
+                    "artifacts": [
+                        {
+                            "name": "snakeyaml",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\yaml\\snakeyaml\\1.30\\snakeyaml-1.30.jar"
+                        },
+                        {
+                            "name": "snakeyaml",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\yaml\\snakeyaml\\1.30\\snakeyaml-1.30-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.opentelemetry",
+                    "name": "opentelemetry-sdk-common",
+                    "version": "1.16.0",
+                    "artifacts": [
+                        {
+                            "name": "opentelemetry-sdk-common",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk-common\\1.16.0\\opentelemetry-sdk-common-1.16.0.jar"
+                        },
+                        {
+                            "name": "opentelemetry-sdk-common",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk-common\\1.16.0\\opentelemetry-sdk-common-1.16.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-actuator-autoconfigure",
+                    "version": "2.7.6",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-actuator-autoconfigure",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-actuator-autoconfigure\\2.7.6\\spring-boot-actuator-autoconfigure-2.7.6.jar"
+                        },
+                        {
+                            "name": "spring-boot-actuator-autoconfigure",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-actuator-autoconfigure\\2.7.6\\spring-boot-actuator-autoconfigure-2.7.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.glassfish.jaxb",
+                    "name": "jaxb-runtime",
+                    "version": "2.3.7",
+                    "artifacts": [
+                        {
+                            "name": "jaxb-runtime",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\glassfish\\jaxb\\jaxb-runtime\\2.3.7\\jaxb-runtime-2.3.7.jar"
+                        },
+                        {
+                            "name": "jaxb-runtime",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\glassfish\\jaxb\\jaxb-runtime\\2.3.7\\jaxb-runtime-2.3.7-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "ch.qos.logback",
+                    "name": "logback-classic",
+                    "version": "1.2.11",
+                    "artifacts": [
+                        {
+                            "name": "logback-classic",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\ch\\qos\\logback\\logback-classic\\1.2.11\\logback-classic-1.2.11.jar"
+                        },
+                        {
+                            "name": "logback-classic",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\ch\\qos\\logback\\logback-classic\\1.2.11\\logback-classic-1.2.11-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "javax.inject",
+                    "name": "javax.inject",
+                    "version": "1",
+                    "artifacts": [
+                        {
+                            "name": "javax.inject",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\javax\\inject\\javax.inject\\1\\javax.inject-1.jar"
+                        },
+                        {
+                            "name": "javax.inject",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\javax\\inject\\javax.inject\\1\\javax.inject-1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.github.x-stream",
+                    "name": "mxparser",
+                    "version": "1.2.2",
+                    "artifacts": [
+                        {
+                            "name": "mxparser",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\github\\x-stream\\mxparser\\1.2.2\\mxparser-1.2.2.jar"
+                        },
+                        {
+                            "name": "mxparser",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\github\\x-stream\\mxparser\\1.2.2\\mxparser-1.2.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.antlr",
+                    "name": "stringtemplate",
+                    "version": "3.2.1",
+                    "artifacts": [
+                        {
+                            "name": "stringtemplate",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\antlr\\stringtemplate\\3.2.1\\stringtemplate-3.2.1.jar"
+                        },
+                        {
+                            "name": "stringtemplate",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\antlr\\stringtemplate\\3.2.1\\stringtemplate-3.2.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.sun.jersey",
+                    "name": "jersey-client",
+                    "version": "1.19.4",
+                    "artifacts": [
+                        {
+                            "name": "jersey-client",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\jersey\\jersey-client\\1.19.4\\jersey-client-1.19.4.jar"
+                        },
+                        {
+                            "name": "jersey-client",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\jersey\\jersey-client\\1.19.4\\jersey-client-1.19.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.netflix.servo",
+                    "name": "servo-core",
+                    "version": "0.12.21",
+                    "artifacts": [
+                        {
+                            "name": "servo-core",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\netflix\\servo\\servo-core\\0.12.21\\servo-core-0.12.21.jar"
+                        },
+                        {
+                            "name": "servo-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\netflix\\servo\\servo-core\\0.12.21\\servo-core-0.12.21-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot",
+                    "version": "2.7.6",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot\\2.7.6\\spring-boot-2.7.6.jar"
+                        },
+                        {
+                            "name": "spring-boot",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot\\2.7.6\\spring-boot-2.7.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.xmlunit",
+                    "name": "xmlunit-core",
+                    "version": "2.9.0",
+                    "artifacts": [
+                        {
+                            "name": "xmlunit-core",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\xmlunit\\xmlunit-core\\2.9.0\\xmlunit-core-2.9.0.jar"
+                        },
+                        {
+                            "name": "xmlunit-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\xmlunit\\xmlunit-core\\2.9.0\\xmlunit-core-2.9.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.grpc",
+                    "name": "grpc-api",
+                    "version": "1.42.1",
+                    "artifacts": [
+                        {
+                            "name": "grpc-api",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\grpc\\grpc-api\\1.42.1\\grpc-api-1.42.1.jar"
+                        },
+                        {
+                            "name": "grpc-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\grpc\\grpc-api\\1.42.1\\grpc-api-1.42.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-cache",
+                    "version": "2.7.6",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-cache",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-cache\\2.7.6\\spring-boot-starter-cache-2.7.6.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-cache",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-cache\\2.7.6\\spring-boot-starter-cache-2.7.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-devtools",
+                    "version": "2.7.6",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-devtools",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-devtools\\2.7.6\\spring-boot-devtools-2.7.6.jar"
+                        },
+                        {
+                            "name": "spring-boot-devtools",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-devtools\\2.7.6\\spring-boot-devtools-2.7.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.opentelemetry",
+                    "name": "opentelemetry-extension-aws",
+                    "version": "1.16.0",
+                    "artifacts": [
+                        {
+                            "name": "opentelemetry-extension-aws",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-extension-aws\\1.16.0\\opentelemetry-extension-aws-1.16.0.jar"
+                        },
+                        {
+                            "name": "opentelemetry-extension-aws",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-extension-aws\\1.16.0\\opentelemetry-extension-aws-1.16.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.errorprone",
+                    "name": "error_prone_annotations",
+                    "version": "2.9.0",
+                    "artifacts": [
+                        {
+                            "name": "error_prone_annotations",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\google\\errorprone\\error_prone_annotations\\2.9.0\\error_prone_annotations-2.9.0.jar"
+                        },
+                        {
+                            "name": "error_prone_annotations",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\google\\errorprone\\error_prone_annotations\\2.9.0\\error_prone_annotations-2.9.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter",
+                    "version": "2.7.6",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter\\2.7.6\\spring-boot-starter-2.7.6.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter\\2.7.6\\spring-boot-starter-2.7.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.cloud",
+                    "name": "spring-cloud-starter-netflix-eureka-server",
+                    "version": "3.1.4",
+                    "artifacts": [
+                        {
+                            "name": "spring-cloud-starter-netflix-eureka-server",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-starter-netflix-eureka-server\\3.1.4\\spring-cloud-starter-netflix-eureka-server-3.1.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-autoconfigure",
+                    "version": "2.7.6",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-autoconfigure",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-autoconfigure\\2.7.6\\spring-boot-autoconfigure-2.7.6.jar"
+                        },
+                        {
+                            "name": "spring-boot-autoconfigure",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-autoconfigure\\2.7.6\\spring-boot-autoconfigure-2.7.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.opentelemetry",
+                    "name": "opentelemetry-api",
+                    "version": "1.16.0",
+                    "artifacts": [
+                        {
+                            "name": "opentelemetry-api",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-api\\1.16.0\\opentelemetry-api-1.16.0.jar"
+                        },
+                        {
+                            "name": "opentelemetry-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-api\\1.16.0\\opentelemetry-api-1.16.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.datatype",
+                    "name": "jackson-datatype-jsr310",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-datatype-jsr310",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\datatype\\jackson-datatype-jsr310\\2.13.4\\jackson-datatype-jsr310-2.13.4.jar"
+                        },
+                        {
+                            "name": "jackson-datatype-jsr310",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\datatype\\jackson-datatype-jsr310\\2.13.4\\jackson-datatype-jsr310-2.13.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.assertj",
+                    "name": "assertj-core",
+                    "version": "3.22.0",
+                    "artifacts": [
+                        {
+                            "name": "assertj-core",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\assertj\\assertj-core\\3.22.0\\assertj-core-3.22.0.jar"
+                        },
+                        {
+                            "name": "assertj-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\assertj\\assertj-core\\3.22.0\\assertj-core-3.22.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-test",
+                    "version": "5.3.24",
+                    "artifacts": [
+                        {
+                            "name": "spring-test",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-test\\5.3.24\\spring-test-5.3.24.jar"
+                        },
+                        {
+                            "name": "spring-test",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-test\\5.3.24\\spring-test-5.3.24-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.opentelemetry",
+                    "name": "opentelemetry-extension-trace-propagators",
+                    "version": "1.16.0",
+                    "artifacts": [
+                        {
+                            "name": "opentelemetry-extension-trace-propagators",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-extension-trace-propagators\\1.16.0\\opentelemetry-extension-trace-propagators-1.16.0.jar"
+                        },
+                        {
+                            "name": "opentelemetry-extension-trace-propagators",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-extension-trace-propagators\\1.16.0\\opentelemetry-extension-trace-propagators-1.16.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.grpc",
+                    "name": "grpc-context",
+                    "version": "1.42.1",
+                    "artifacts": [
+                        {
+                            "name": "grpc-context",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\grpc\\grpc-context\\1.42.1\\grpc-context-1.42.1.jar"
+                        },
+                        {
+                            "name": "grpc-context",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\grpc\\grpc-context\\1.42.1\\grpc-context-1.42.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.tomcat.embed",
+                    "name": "tomcat-embed-websocket",
+                    "version": "9.0.69",
+                    "artifacts": [
+                        {
+                            "name": "tomcat-embed-websocket",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-websocket\\9.0.69\\tomcat-embed-websocket-9.0.69.jar"
+                        },
+                        {
+                            "name": "tomcat-embed-websocket",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-websocket\\9.0.69\\tomcat-embed-websocket-9.0.69-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.httpcomponents",
+                    "name": "httpcore",
+                    "version": "4.4.15",
+                    "artifacts": [
+                        {
+                            "name": "httpcore",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\httpcomponents\\httpcore\\4.4.15\\httpcore-4.4.15.jar"
+                        },
+                        {
+                            "name": "httpcore",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\httpcomponents\\httpcore\\4.4.15\\httpcore-4.4.15-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jetbrains",
+                    "name": "annotations",
+                    "version": "13.0",
+                    "artifacts": [
+                        {
+                            "name": "annotations",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\jetbrains\\annotations\\13.0\\annotations-13.0.jar"
+                        },
+                        {
+                            "name": "annotations",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\jetbrains\\annotations\\13.0\\annotations-13.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.sun.jersey",
+                    "name": "jersey-core",
+                    "version": "1.19.1",
+                    "artifacts": [
+                        {
+                            "name": "jersey-core",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\jersey\\jersey-core\\1.19.1\\jersey-core-1.19.1.jar"
+                        },
+                        {
+                            "name": "jersey-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\jersey\\jersey-core\\1.19.1\\jersey-core-1.19.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-core",
+                    "version": "5.3.24",
+                    "artifacts": [
+                        {
+                            "name": "spring-core",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-core\\5.3.24\\spring-core-5.3.24.jar"
+                        },
+                        {
+                            "name": "spring-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-core\\5.3.24\\spring-core-5.3.24-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-jcl",
+                    "version": "5.3.24",
+                    "artifacts": [
+                        {
+                            "name": "spring-jcl",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-jcl\\5.3.24\\spring-jcl-5.3.24.jar"
+                        },
+                        {
+                            "name": "spring-jcl",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-jcl\\5.3.24\\spring-jcl-5.3.24-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.hamcrest",
+                    "name": "hamcrest",
+                    "version": "2.2",
+                    "artifacts": [
+                        {
+                            "name": "hamcrest",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\hamcrest\\hamcrest\\2.2\\hamcrest-2.2.jar"
+                        },
+                        {
+                            "name": "hamcrest",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\hamcrest\\hamcrest\\2.2\\hamcrest-2.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.opentelemetry",
+                    "name": "opentelemetry-exporter-otlp-common",
+                    "version": "1.16.0",
+                    "artifacts": [
+                        {
+                            "name": "opentelemetry-exporter-otlp-common",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-exporter-otlp-common\\1.16.0\\opentelemetry-exporter-otlp-common-1.16.0.jar"
+                        },
+                        {
+                            "name": "opentelemetry-exporter-otlp-common",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-exporter-otlp-common\\1.16.0\\opentelemetry-exporter-otlp-common-1.16.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.cloud",
+                    "name": "spring-cloud-commons",
+                    "version": "3.1.5",
+                    "artifacts": [
+                        {
+                            "name": "spring-cloud-commons",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-commons\\3.1.5\\spring-cloud-commons-3.1.5.jar"
+                        },
+                        {
+                            "name": "spring-cloud-commons",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-commons\\3.1.5\\spring-cloud-commons-3.1.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.netflix.netflix-commons",
+                    "name": "netflix-eventbus",
+                    "version": "0.3.0",
+                    "artifacts": [
+                        {
+                            "name": "netflix-eventbus",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\netflix\\netflix-commons\\netflix-eventbus\\0.3.0\\netflix-eventbus-0.3.0.jar"
+                        },
+                        {
+                            "name": "netflix-eventbus",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\netflix\\netflix-commons\\netflix-eventbus\\0.3.0\\netflix-eventbus-0.3.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-test",
+                    "version": "2.7.6",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-test",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-test\\2.7.6\\spring-boot-starter-test-2.7.6.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-test",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-test\\2.7.6\\spring-boot-starter-test-2.7.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.squareup.okio",
+                    "name": "okio",
+                    "version": "1.17.5",
+                    "artifacts": [
+                        {
+                            "name": "okio",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\squareup\\okio\\okio\\1.17.5\\okio-1.17.5.jar"
+                        },
+                        {
+                            "name": "okio",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\squareup\\okio\\okio\\1.17.5\\okio-1.17.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.guava",
+                    "name": "guava",
+                    "version": "30.1-android",
+                    "artifacts": [
+                        {
+                            "name": "guava",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\google\\guava\\guava\\30.1-android\\guava-30.1-android.jar"
+                        },
+                        {
+                            "name": "guava",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\google\\guava\\guava\\30.1-android\\guava-30.1-android-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.glassfish.jaxb",
+                    "name": "txw2",
+                    "version": "2.3.7",
+                    "artifacts": [
+                        {
+                            "name": "txw2",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\glassfish\\jaxb\\txw2\\2.3.7\\txw2-2.3.7.jar"
+                        },
+                        {
+                            "name": "txw2",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\glassfish\\jaxb\\txw2\\2.3.7\\txw2-2.3.7-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.inject",
+                    "name": "guice",
+                    "version": "4.1.0",
+                    "artifacts": [
+                        {
+                            "name": "guice",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\google\\inject\\guice\\4.1.0\\guice-4.1.0.jar"
+                        },
+                        {
+                            "name": "guice",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\google\\inject\\guice\\4.1.0\\guice-4.1.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "commons-lang",
+                    "name": "commons-lang",
+                    "version": "2.6",
+                    "artifacts": [
+                        {
+                            "name": "commons-lang",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\commons-lang\\commons-lang\\2.6\\commons-lang-2.6.jar"
+                        },
+                        {
+                            "name": "commons-lang",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\commons-lang\\commons-lang\\2.6\\commons-lang-2.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.checkerframework",
+                    "name": "checker-compat-qual",
+                    "version": "2.5.5",
+                    "artifacts": [
+                        {
+                            "name": "checker-compat-qual",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\checkerframework\\checker-compat-qual\\2.5.5\\checker-compat-qual-2.5.5.jar"
+                        },
+                        {
+                            "name": "checker-compat-qual",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\checkerframework\\checker-compat-qual\\2.5.5\\checker-compat-qual-2.5.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.core",
+                    "name": "jackson-databind",
+                    "version": "2.13.4.2",
+                    "artifacts": [
+                        {
+                            "name": "jackson-databind",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-databind\\2.13.4.2\\jackson-databind-2.13.4.2.jar"
+                        },
+                        {
+                            "name": "jackson-databind",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-databind\\2.13.4.2\\jackson-databind-2.13.4.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.jupiter",
+                    "name": "junit-jupiter-params",
+                    "version": "5.8.2",
+                    "artifacts": [
+                        {
+                            "name": "junit-jupiter-params",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter-params\\5.8.2\\junit-jupiter-params-5.8.2.jar"
+                        },
+                        {
+                            "name": "junit-jupiter-params",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter-params\\5.8.2\\junit-jupiter-params-5.8.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.antlr",
+                    "name": "antlr-runtime",
+                    "version": "3.4",
+                    "artifacts": [
+                        {
+                            "name": "antlr-runtime",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\antlr\\antlr-runtime\\3.4\\antlr-runtime-3.4.jar"
+                        },
+                        {
+                            "name": "antlr-runtime",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\antlr\\antlr-runtime\\3.4\\antlr-runtime-3.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.cloud",
+                    "name": "spring-cloud-starter",
+                    "version": "3.1.5",
+                    "artifacts": [
+                        {
+                            "name": "spring-cloud-starter",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-starter\\3.1.5\\spring-cloud-starter-3.1.5.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.sun.istack",
+                    "name": "istack-commons-runtime",
+                    "version": "3.0.12",
+                    "artifacts": [
+                        {
+                            "name": "istack-commons-runtime",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\istack\\istack-commons-runtime\\3.0.12\\istack-commons-runtime-3.0.12.jar"
+                        },
+                        {
+                            "name": "istack-commons-runtime",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\istack\\istack-commons-runtime\\3.0.12\\istack-commons-runtime-3.0.12-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.core",
+                    "name": "jackson-core",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-core",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-core\\2.13.4\\jackson-core-2.13.4.jar"
+                        },
+                        {
+                            "name": "jackson-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-core\\2.13.4\\jackson-core-2.13.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "joda-time",
+                    "name": "joda-time",
+                    "version": "2.3",
+                    "artifacts": [
+                        {
+                            "name": "joda-time",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\joda-time\\joda-time\\2.3\\joda-time-2.3.jar"
+                        },
+                        {
+                            "name": "joda-time",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\joda-time\\joda-time\\2.3\\joda-time-2.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.jupiter",
+                    "name": "junit-jupiter-api",
+                    "version": "5.8.2",
+                    "artifacts": [
+                        {
+                            "name": "junit-jupiter-api",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter-api\\5.8.2\\junit-jupiter-api-5.8.2.jar"
+                        },
+                        {
+                            "name": "junit-jupiter-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\junit\\jupiter\\junit-jupiter-api\\5.8.2\\junit-jupiter-api-5.8.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.cloud",
+                    "name": "spring-cloud-loadbalancer",
+                    "version": "3.1.5",
+                    "artifacts": [
+                        {
+                            "name": "spring-cloud-loadbalancer",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-loadbalancer\\3.1.5\\spring-cloud-loadbalancer-3.1.5.jar"
+                        },
+                        {
+                            "name": "spring-cloud-loadbalancer",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-loadbalancer\\3.1.5\\spring-cloud-loadbalancer-3.1.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "commons-codec",
+                    "name": "commons-codec",
+                    "version": "1.15",
+                    "artifacts": [
+                        {
+                            "name": "commons-codec",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\commons-codec\\commons-codec\\1.15\\commons-codec-1.15.jar"
+                        },
+                        {
+                            "name": "commons-codec",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\commons-codec\\commons-codec\\1.15\\commons-codec-1.15-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-web",
+                    "version": "5.3.24",
+                    "artifacts": [
+                        {
+                            "name": "spring-web",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-web\\5.3.24\\spring-web-5.3.24.jar"
+                        },
+                        {
+                            "name": "spring-web",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-web\\5.3.24\\spring-web-5.3.24-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-beans",
+                    "version": "5.3.24",
+                    "artifacts": [
+                        {
+                            "name": "spring-beans",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-beans\\5.3.24\\spring-beans-5.3.24.jar"
+                        },
+                        {
+                            "name": "spring-beans",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-beans\\5.3.24\\spring-beans-5.3.24-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.cloud",
+                    "name": "spring-cloud-sleuth-autoconfigure",
+                    "version": "3.1.5",
+                    "artifacts": [
+                        {
+                            "name": "spring-cloud-sleuth-autoconfigure",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-sleuth-autoconfigure\\3.1.5\\spring-cloud-sleuth-autoconfigure-3.1.5.jar"
+                        },
+                        {
+                            "name": "spring-cloud-sleuth-autoconfigure",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-sleuth-autoconfigure\\3.1.5\\spring-cloud-sleuth-autoconfigure-3.1.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.freemarker",
+                    "name": "freemarker",
+                    "version": "2.3.31",
+                    "artifacts": [
+                        {
+                            "name": "freemarker",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\freemarker\\freemarker\\2.3.31\\freemarker-2.3.31.jar"
+                        },
+                        {
+                            "name": "freemarker",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\freemarker\\freemarker\\2.3.31\\freemarker-2.3.31-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.thoughtworks.xstream",
+                    "name": "xstream",
+                    "version": "1.4.18",
+                    "artifacts": [
+                        {
+                            "name": "xstream",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\thoughtworks\\xstream\\xstream\\1.4.18\\xstream-1.4.18.jar"
+                        },
+                        {
+                            "name": "xstream",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\thoughtworks\\xstream\\xstream\\1.4.18\\xstream-1.4.18-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "javax.ws.rs",
+                    "name": "jsr311-api",
+                    "version": "1.1.1",
+                    "artifacts": [
+                        {
+                            "name": "jsr311-api",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\javax\\ws\\rs\\jsr311-api\\1.1.1\\jsr311-api-1.1.1.jar"
+                        },
+                        {
+                            "name": "jsr311-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\javax\\ws\\rs\\jsr311-api\\1.1.1\\jsr311-api-1.1.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "jakarta.xml.bind",
+                    "name": "jakarta.xml.bind-api",
+                    "version": "2.3.3",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.xml.bind-api",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\jakarta\\xml\\bind\\jakarta.xml.bind-api\\2.3.3\\jakarta.xml.bind-api-2.3.3.jar"
+                        },
+                        {
+                            "name": "jakarta.xml.bind-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\jakarta\\xml\\bind\\jakarta.xml.bind-api\\2.3.3\\jakarta.xml.bind-api-2.3.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.stoyanr",
+                    "name": "evictor",
+                    "version": "1.0.0",
+                    "artifacts": [
+                        {
+                            "name": "evictor",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\stoyanr\\evictor\\1.0.0\\evictor-1.0.0.jar"
+                        },
+                        {
+                            "name": "evictor",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\stoyanr\\evictor\\1.0.0\\evictor-1.0.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.projectreactor.addons",
+                    "name": "reactor-extra",
+                    "version": "3.4.9",
+                    "artifacts": [
+                        {
+                            "name": "reactor-extra",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\projectreactor\\addons\\reactor-extra\\3.4.9\\reactor-extra-3.4.9.jar"
+                        },
+                        {
+                            "name": "reactor-extra",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\projectreactor\\addons\\reactor-extra\\3.4.9\\reactor-extra-3.4.9-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-expression",
+                    "version": "5.3.24",
+                    "artifacts": [
+                        {
+                            "name": "spring-expression",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-expression\\5.3.24\\spring-expression-5.3.24.jar"
+                        },
+                        {
+                            "name": "spring-expression",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-expression\\5.3.24\\spring-expression-5.3.24-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.opentelemetry",
+                    "name": "opentelemetry-sdk-extension-autoconfigure-spi",
+                    "version": "1.16.0",
+                    "artifacts": [
+                        {
+                            "name": "opentelemetry-sdk-extension-autoconfigure-spi",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk-extension-autoconfigure-spi\\1.16.0\\opentelemetry-sdk-extension-autoconfigure-spi-1.16.0.jar"
+                        },
+                        {
+                            "name": "opentelemetry-sdk-extension-autoconfigure-spi",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk-extension-autoconfigure-spi\\1.16.0\\opentelemetry-sdk-extension-autoconfigure-spi-1.16.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.bytebuddy",
+                    "name": "byte-buddy",
+                    "version": "1.12.19",
+                    "artifacts": [
+                        {
+                            "name": "byte-buddy",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\net\\bytebuddy\\byte-buddy\\1.12.19\\byte-buddy-1.12.19.jar"
+                        },
+                        {
+                            "name": "byte-buddy",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\net\\bytebuddy\\byte-buddy\\1.12.19\\byte-buddy-1.12.19-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.bytebuddy",
+                    "name": "byte-buddy-agent",
+                    "version": "1.12.19",
+                    "artifacts": [
+                        {
+                            "name": "byte-buddy-agent",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\net\\bytebuddy\\byte-buddy-agent\\1.12.19\\byte-buddy-agent-1.12.19.jar"
+                        },
+                        {
+                            "name": "byte-buddy-agent",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\net\\bytebuddy\\byte-buddy-agent\\1.12.19\\byte-buddy-agent-1.12.19-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.objenesis",
+                    "name": "objenesis",
+                    "version": "3.2",
+                    "artifacts": [
+                        {
+                            "name": "objenesis",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\objenesis\\objenesis\\3.2\\objenesis-3.2.jar"
+                        },
+                        {
+                            "name": "objenesis",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\objenesis\\objenesis\\3.2\\objenesis-3.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.vaadin.external.google",
+                    "name": "android-json",
+                    "version": "0.0.20131108.vaadin1",
+                    "artifacts": [
+                        {
+                            "name": "android-json",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\vaadin\\external\\google\\android-json\\0.0.20131108.vaadin1\\android-json-0.0.20131108.vaadin1.jar"
+                        },
+                        {
+                            "name": "android-json",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\vaadin\\external\\google\\android-json\\0.0.20131108.vaadin1\\android-json-0.0.20131108.vaadin1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-context-support",
+                    "version": "5.3.24",
+                    "artifacts": [
+                        {
+                            "name": "spring-context-support",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-context-support\\5.3.24\\spring-context-support-5.3.24.jar"
+                        },
+                        {
+                            "name": "spring-context-support",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-context-support\\5.3.24\\spring-context-support-5.3.24-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.projectreactor",
+                    "name": "reactor-core",
+                    "version": "3.4.25",
+                    "artifacts": [
+                        {
+                            "name": "reactor-core",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\projectreactor\\reactor-core\\3.4.25\\reactor-core-3.4.25.jar"
+                        },
+                        {
+                            "name": "reactor-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\projectreactor\\reactor-core\\3.4.25\\reactor-core-3.4.25-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.reactivestreams",
+                    "name": "reactive-streams",
+                    "version": "1.0.4",
+                    "artifacts": [
+                        {
+                            "name": "reactive-streams",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\reactivestreams\\reactive-streams\\1.0.4\\reactive-streams-1.0.4.jar"
+                        },
+                        {
+                            "name": "reactive-streams",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\reactivestreams\\reactive-streams\\1.0.4\\reactive-streams-1.0.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "xmlpull",
+                    "name": "xmlpull",
+                    "version": "1.1.3.1",
+                    "artifacts": [
+                        {
+                            "name": "xmlpull",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\xmlpull\\xmlpull\\1.1.3.1\\xmlpull-1.1.3.1.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "jakarta.annotation",
+                    "name": "jakarta.annotation-api",
+                    "version": "1.3.5",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.annotation-api",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\jakarta\\annotation\\jakarta.annotation-api\\1.3.5\\jakarta.annotation-api-1.3.5.jar"
+                        },
+                        {
+                            "name": "jakarta.annotation-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\jakarta\\annotation\\jakarta.annotation-api\\1.3.5\\jakarta.annotation-api-1.3.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.cloud",
+                    "name": "spring-cloud-context",
+                    "version": "3.1.5",
+                    "artifacts": [
+                        {
+                            "name": "spring-cloud-context",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-context\\3.1.5\\spring-cloud-context-3.1.5.jar"
+                        },
+                        {
+                            "name": "spring-cloud-context",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-context\\3.1.5\\spring-cloud-context-3.1.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.bouncycastle",
+                    "name": "bcprov-jdk15on",
+                    "version": "1.69",
+                    "artifacts": [
+                        {
+                            "name": "bcprov-jdk15on",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\bouncycastle\\bcprov-jdk15on\\1.69\\bcprov-jdk15on-1.69.jar"
+                        },
+                        {
+                            "name": "bcprov-jdk15on",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\bouncycastle\\bcprov-jdk15on\\1.69\\bcprov-jdk15on-1.69-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.opentelemetry",
+                    "name": "opentelemetry-context",
+                    "version": "1.16.0",
+                    "artifacts": [
+                        {
+                            "name": "opentelemetry-context",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-context\\1.16.0\\opentelemetry-context-1.16.0.jar"
+                        },
+                        {
+                            "name": "opentelemetry-context",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-context\\1.16.0\\opentelemetry-context-1.16.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.minidev",
+                    "name": "accessors-smart",
+                    "version": "2.4.8",
+                    "artifacts": [
+                        {
+                            "name": "accessors-smart",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\net\\minidev\\accessors-smart\\2.4.8\\accessors-smart-2.4.8.jar"
+                        },
+                        {
+                            "name": "accessors-smart",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\net\\minidev\\accessors-smart\\2.4.8\\accessors-smart-2.4.8-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.skyscreamer",
+                    "name": "jsonassert",
+                    "version": "1.5.1",
+                    "artifacts": [
+                        {
+                            "name": "jsonassert",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\skyscreamer\\jsonassert\\1.5.1\\jsonassert-1.5.1.jar"
+                        },
+                        {
+                            "name": "jsonassert",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\skyscreamer\\jsonassert\\1.5.1\\jsonassert-1.5.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.opentest4j",
+                    "name": "opentest4j",
+                    "version": "1.2.0",
+                    "artifacts": [
+                        {
+                            "name": "opentest4j",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\opentest4j\\opentest4j\\1.2.0\\opentest4j-1.2.0.jar"
+                        },
+                        {
+                            "name": "opentest4j",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\opentest4j\\opentest4j\\1.2.0\\opentest4j-1.2.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jetbrains.kotlin",
+                    "name": "kotlin-stdlib",
+                    "version": "1.6.21",
+                    "artifacts": [
+                        {
+                            "name": "kotlin-stdlib",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\jetbrains\\kotlin\\kotlin-stdlib\\1.6.21\\kotlin-stdlib-1.6.21.jar"
+                        },
+                        {
+                            "name": "kotlin-stdlib",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\jetbrains\\kotlin\\kotlin-stdlib\\1.6.21\\kotlin-stdlib-1.6.21-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.opentelemetry",
+                    "name": "opentelemetry-sdk",
+                    "version": "1.16.0",
+                    "artifacts": [
+                        {
+                            "name": "opentelemetry-sdk",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk\\1.16.0\\opentelemetry-sdk-1.16.0.jar"
+                        },
+                        {
+                            "name": "opentelemetry-sdk",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-sdk\\1.16.0\\opentelemetry-sdk-1.16.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.datatype",
+                    "name": "jackson-datatype-jdk8",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-datatype-jdk8",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\datatype\\jackson-datatype-jdk8\\2.13.4\\jackson-datatype-jdk8-2.13.4.jar"
+                        },
+                        {
+                            "name": "jackson-datatype-jdk8",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\datatype\\jackson-datatype-jdk8\\2.13.4\\jackson-datatype-jdk8-2.13.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.squareup.okhttp",
+                    "name": "okhttp",
+                    "version": "2.7.4",
+                    "artifacts": [
+                        {
+                            "name": "okhttp",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\squareup\\okhttp\\okhttp\\2.7.4\\okhttp-2.7.4.jar"
+                        },
+                        {
+                            "name": "okhttp",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\squareup\\okhttp\\okhttp\\2.7.4\\okhttp-2.7.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.codehaus.jettison",
+                    "name": "jettison",
+                    "version": "1.4.0",
+                    "artifacts": [
+                        {
+                            "name": "jettison",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\codehaus\\jettison\\jettison\\1.4.0\\jettison-1.4.0.jar"
+                        },
+                        {
+                            "name": "jettison",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\codehaus\\jettison\\jettison\\1.4.0\\jettison-1.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework",
+                    "name": "spring-aop",
+                    "version": "5.3.24",
+                    "artifacts": [
+                        {
+                            "name": "spring-aop",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-aop\\5.3.24\\spring-aop-5.3.24.jar"
+                        },
+                        {
+                            "name": "spring-aop",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\spring-aop\\5.3.24\\spring-aop-5.3.24-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apiguardian",
+                    "name": "apiguardian-api",
+                    "version": "1.1.2",
+                    "artifacts": [
+                        {
+                            "name": "apiguardian-api",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apiguardian\\apiguardian-api\\1.1.2\\apiguardian-api-1.1.2.jar"
+                        },
+                        {
+                            "name": "apiguardian-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apiguardian\\apiguardian-api\\1.1.2\\apiguardian-api-1.1.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-logging",
+                    "version": "2.7.6",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-logging",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-logging\\2.7.6\\spring-boot-starter-logging-2.7.6.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-logging",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-logging\\2.7.6\\spring-boot-starter-logging-2.7.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.httpcomponents",
+                    "name": "httpclient",
+                    "version": "4.5.13",
+                    "artifacts": [
+                        {
+                            "name": "httpclient",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\httpcomponents\\httpclient\\4.5.13\\httpclient-4.5.13.jar"
+                        },
+                        {
+                            "name": "httpclient",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\httpcomponents\\httpclient\\4.5.13\\httpclient-4.5.13-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-json",
+                    "version": "2.7.6",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-json",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-json\\2.7.6\\spring-boot-starter-json-2.7.6.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-json",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-json\\2.7.6\\spring-boot-starter-json-2.7.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.opentelemetry",
+                    "name": "opentelemetry-exporter-otlp-trace",
+                    "version": "1.14.0",
+                    "artifacts": [
+                        {
+                            "name": "opentelemetry-exporter-otlp-trace",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-exporter-otlp-trace\\1.14.0\\opentelemetry-exporter-otlp-trace-1.14.0.jar"
+                        },
+                        {
+                            "name": "opentelemetry-exporter-otlp-trace",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\opentelemetry-exporter-otlp-trace\\1.14.0\\opentelemetry-exporter-otlp-trace-1.14.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.netflix.eureka",
+                    "name": "eureka-client",
+                    "version": "1.10.17",
+                    "artifacts": [
+                        {
+                            "name": "eureka-client",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\netflix\\eureka\\eureka-client\\1.10.17\\eureka-client-1.10.17.jar"
+                        },
+                        {
+                            "name": "eureka-client",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\netflix\\eureka\\eureka-client\\1.10.17\\eureka-client-1.10.17-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.commons",
+                    "name": "commons-math",
+                    "version": "2.2",
+                    "artifacts": [
+                        {
+                            "name": "commons-math",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\commons\\commons-math\\2.2\\commons-math-2.2.jar"
+                        },
+                        {
+                            "name": "commons-math",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\commons\\commons-math\\2.2\\commons-math-2.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.aspectj",
+                    "name": "aspectjweaver",
+                    "version": "1.9.7",
+                    "artifacts": [
+                        {
+                            "name": "aspectjweaver",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\aspectj\\aspectjweaver\\1.9.7\\aspectjweaver-1.9.7.jar"
+                        },
+                        {
+                            "name": "aspectjweaver",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\aspectj\\aspectjweaver\\1.9.7\\aspectjweaver-1.9.7-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.cloud",
+                    "name": "spring-cloud-starter-loadbalancer",
+                    "version": "3.1.5",
+                    "artifacts": [
+                        {
+                            "name": "spring-cloud-starter-loadbalancer",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-starter-loadbalancer\\3.1.5\\spring-cloud-starter-loadbalancer-3.1.5.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.opentelemetry.instrumentation",
+                    "name": "opentelemetry-instrumentation-api-semconv",
+                    "version": "1.18.0-alpha",
+                    "artifacts": [
+                        {
+                            "name": "opentelemetry-instrumentation-api-semconv",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\instrumentation\\opentelemetry-instrumentation-api-semconv\\1.18.0-alpha\\opentelemetry-instrumentation-api-semconv-1.18.0-alpha.jar"
+                        },
+                        {
+                            "name": "opentelemetry-instrumentation-api-semconv",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\opentelemetry\\instrumentation\\opentelemetry-instrumentation-api-semconv\\1.18.0-alpha\\opentelemetry-instrumentation-api-semconv-1.18.0-alpha-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.bouncycastle",
+                    "name": "bcutil-jdk15on",
+                    "version": "1.69",
+                    "artifacts": [
+                        {
+                            "name": "bcutil-jdk15on",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\bouncycastle\\bcutil-jdk15on\\1.69\\bcutil-jdk15on-1.69.jar"
+                        },
+                        {
+                            "name": "bcutil-jdk15on",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\bouncycastle\\bcutil-jdk15on\\1.69\\bcutil-jdk15on-1.69-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.module",
+                    "name": "jackson-module-parameter-names",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-module-parameter-names",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\module\\jackson-module-parameter-names\\2.13.4\\jackson-module-parameter-names-2.13.4.jar"
+                        },
+                        {
+                            "name": "jackson-module-parameter-names",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\module\\jackson-module-parameter-names\\2.13.4\\jackson-module-parameter-names-2.13.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.cloud",
+                    "name": "spring-cloud-sleuth-api",
+                    "version": "3.1.5",
+                    "artifacts": [
+                        {
+                            "name": "spring-cloud-sleuth-api",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-sleuth-api\\3.1.5\\spring-cloud-sleuth-api-3.1.5.jar"
+                        },
+                        {
+                            "name": "spring-cloud-sleuth-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-sleuth-api\\3.1.5\\spring-cloud-sleuth-api-3.1.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-aop",
+                    "version": "2.7.6",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-aop",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-aop\\2.7.6\\spring-boot-starter-aop-2.7.6.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-aop",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-aop\\2.7.6\\spring-boot-starter-aop-2.7.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.sun.activation",
+                    "name": "jakarta.activation",
+                    "version": "1.2.2",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.activation",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\activation\\jakarta.activation\\1.2.2\\jakarta.activation-1.2.2.jar"
+                        },
+                        {
+                            "name": "jakarta.activation",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\activation\\jakarta.activation\\1.2.2\\jakarta.activation-1.2.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.code.findbugs",
+                    "name": "jsr305",
+                    "version": "3.0.2",
+                    "artifacts": [
+                        {
+                            "name": "jsr305",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\google\\code\\findbugs\\jsr305\\3.0.2\\jsr305-3.0.2.jar"
+                        },
+                        {
+                            "name": "jsr305",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\google\\code\\findbugs\\jsr305\\3.0.2\\jsr305-3.0.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.grpc",
+                    "name": "grpc-okhttp",
+                    "version": "1.42.1",
+                    "artifacts": [
+                        {
+                            "name": "grpc-okhttp",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\grpc\\grpc-okhttp\\1.42.1\\grpc-okhttp-1.42.1.jar"
+                        },
+                        {
+                            "name": "grpc-okhttp",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\grpc\\grpc-okhttp\\1.42.1\\grpc-okhttp-1.42.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.dataformat",
+                    "name": "jackson-dataformat-xml",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-dataformat-xml",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\dataformat\\jackson-dataformat-xml\\2.13.4\\jackson-dataformat-xml-2.13.4.jar"
+                        },
+                        {
+                            "name": "jackson-dataformat-xml",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\jackson\\dataformat\\jackson-dataformat-xml\\2.13.4\\jackson-dataformat-xml-2.13.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.aspectj",
+                    "name": "aspectjrt",
+                    "version": "1.9.7",
+                    "artifacts": [
+                        {
+                            "name": "aspectjrt",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\aspectj\\aspectjrt\\1.9.7\\aspectjrt-1.9.7.jar"
+                        },
+                        {
+                            "name": "aspectjrt",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\aspectj\\aspectjrt\\1.9.7\\aspectjrt-1.9.7-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.sun.jersey.contribs",
+                    "name": "jersey-apache-client4",
+                    "version": "1.19.1",
+                    "artifacts": [
+                        {
+                            "name": "jersey-apache-client4",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\jersey\\contribs\\jersey-apache-client4\\1.19.1\\jersey-apache-client4-1.19.1.jar"
+                        },
+                        {
+                            "name": "jersey-apache-client4",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\sun\\jersey\\contribs\\jersey-apache-client4\\1.19.1\\jersey-apache-client4-1.19.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-test",
+                    "version": "2.7.6",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-test",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-test\\2.7.6\\spring-boot-test-2.7.6.jar"
+                        },
+                        {
+                            "name": "spring-boot-test",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-test\\2.7.6\\spring-boot-test-2.7.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-tomcat",
+                    "version": "2.7.6",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-tomcat",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-tomcat\\2.7.6\\spring-boot-starter-tomcat-2.7.6.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-tomcat",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-tomcat\\2.7.6\\spring-boot-starter-tomcat-2.7.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.jayway.jsonpath",
+                    "name": "json-path",
+                    "version": "2.7.0",
+                    "artifacts": [
+                        {
+                            "name": "json-path",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\jayway\\jsonpath\\json-path\\2.7.0\\json-path-2.7.0.jar"
+                        },
+                        {
+                            "name": "json-path",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\jayway\\jsonpath\\json-path\\2.7.0\\json-path-2.7.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.boot",
+                    "name": "spring-boot-starter-freemarker",
+                    "version": "2.7.6",
+                    "artifacts": [
+                        {
+                            "name": "spring-boot-starter-freemarker",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-freemarker\\2.7.6\\spring-boot-starter-freemarker-2.7.6.jar"
+                        },
+                        {
+                            "name": "spring-boot-starter-freemarker",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\boot\\spring-boot-starter-freemarker\\2.7.6\\spring-boot-starter-freemarker-2.7.6-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.grpc",
+                    "name": "grpc-core",
+                    "version": "1.42.1",
+                    "artifacts": [
+                        {
+                            "name": "grpc-core",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\grpc\\grpc-core\\1.42.1\\grpc-core-1.42.1.jar"
+                        },
+                        {
+                            "name": "grpc-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\grpc\\grpc-core\\1.42.1\\grpc-core-1.42.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.woodstox",
+                    "name": "woodstox-core",
+                    "version": "6.2.1",
+                    "artifacts": [
+                        {
+                            "name": "woodstox-core",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\woodstox\\woodstox-core\\6.2.1\\woodstox-core-6.2.1.jar"
+                        },
+                        {
+                            "name": "woodstox-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\fasterxml\\woodstox\\woodstox-core\\6.2.1\\woodstox-core-6.2.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.guava",
+                    "name": "failureaccess",
+                    "version": "1.0.1",
+                    "artifacts": [
+                        {
+                            "name": "failureaccess",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\google\\guava\\failureaccess\\1.0.1\\failureaccess-1.0.1.jar"
+                        },
+                        {
+                            "name": "failureaccess",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\google\\guava\\failureaccess\\1.0.1\\failureaccess-1.0.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.perfmark",
+                    "name": "perfmark-api",
+                    "version": "0.23.0",
+                    "artifacts": [
+                        {
+                            "name": "perfmark-api",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\perfmark\\perfmark-api\\0.23.0\\perfmark-api-0.23.0.jar"
+                        },
+                        {
+                            "name": "perfmark-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\io\\perfmark\\perfmark-api\\0.23.0\\perfmark-api-0.23.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.j2objc",
+                    "name": "j2objc-annotations",
+                    "version": "1.3",
+                    "artifacts": [
+                        {
+                            "name": "j2objc-annotations",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\google\\j2objc\\j2objc-annotations\\1.3\\j2objc-annotations-1.3.jar"
+                        },
+                        {
+                            "name": "j2objc-annotations",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\google\\j2objc\\j2objc-annotations\\1.3\\j2objc-annotations-1.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.logging.log4j",
+                    "name": "log4j-api",
+                    "version": "2.17.2",
+                    "artifacts": [
+                        {
+                            "name": "log4j-api",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-api\\2.17.2\\log4j-api-2.17.2.jar"
+                        },
+                        {
+                            "name": "log4j-api",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-api\\2.17.2\\log4j-api-2.17.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.netflix.eureka",
+                    "name": "eureka-core",
+                    "version": "1.10.17",
+                    "artifacts": [
+                        {
+                            "name": "eureka-core",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\netflix\\eureka\\eureka-core\\1.10.17\\eureka-core-1.10.17.jar"
+                        },
+                        {
+                            "name": "eureka-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\netflix\\eureka\\eureka-core\\1.10.17\\eureka-core-1.10.17-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "antlr",
+                    "name": "antlr",
+                    "version": "2.7.7",
+                    "artifacts": [
+                        {
+                            "name": "antlr",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\antlr\\antlr\\2.7.7\\antlr-2.7.7.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.cloud",
+                    "name": "spring-cloud-netflix-eureka-client",
+                    "version": "3.1.4",
+                    "artifacts": [
+                        {
+                            "name": "spring-cloud-netflix-eureka-client",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-netflix-eureka-client\\3.1.4\\spring-cloud-netflix-eureka-client-3.1.4.jar"
+                        },
+                        {
+                            "name": "spring-cloud-netflix-eureka-client",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-netflix-eureka-client\\3.1.4\\spring-cloud-netflix-eureka-client-3.1.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.security",
+                    "name": "spring-security-rsa",
+                    "version": "1.0.11.RELEASE",
+                    "artifacts": [
+                        {
+                            "name": "spring-security-rsa",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\security\\spring-security-rsa\\1.0.11.RELEASE\\spring-security-rsa-1.0.11.RELEASE.jar"
+                        },
+                        {
+                            "name": "spring-security-rsa",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\security\\spring-security-rsa\\1.0.11.RELEASE\\spring-security-rsa-1.0.11.RELEASE-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.springframework.cloud",
+                    "name": "spring-cloud-sleuth-otel-autoconfigure",
+                    "version": "1.1.0",
+                    "artifacts": [
+                        {
+                            "name": "spring-cloud-sleuth-otel-autoconfigure",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-sleuth-otel-autoconfigure\\1.1.0\\spring-cloud-sleuth-otel-autoconfigure-1.1.0.jar"
+                        },
+                        {
+                            "name": "spring-cloud-sleuth-otel-autoconfigure",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\org\\springframework\\cloud\\spring-cloud-sleuth-otel-autoconfigure\\1.1.0\\spring-cloud-sleuth-otel-autoconfigure-1.1.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.code.gson",
+                    "name": "gson",
+                    "version": "2.9.1",
+                    "artifacts": [
+                        {
+                            "name": "gson",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\google\\code\\gson\\gson\\2.9.1\\gson-2.9.1.jar"
+                        },
+                        {
+                            "name": "gson",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\scorp\\.m2\\repository\\com\\google\\code\\gson\\gson\\2.9.1\\gson-2.9.1-sources.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "test"
+        ]
+    }
+}

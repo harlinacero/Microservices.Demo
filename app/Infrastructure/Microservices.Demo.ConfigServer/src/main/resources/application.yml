@@ -1,0 +1,21 @@
+﻿server:
+  port: 8889
+spring:
+  application:
+    name: Microservices.Demo.ConfigServer
+  cloud:    
+    config:
+      server:
+        git:
+          uri: https://github.com/harlinacero/Microservices-Config-Repository.git
+          search-paths:
+            - '{application}'
+          defaultLabel: master
+eureka:
+  instance:
+    appName: Microservices.Demo.ConfigServer
+    hostname: microservices.demo.configserver
+#    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://microservices.demo.discoveryserver:8761/eureka/

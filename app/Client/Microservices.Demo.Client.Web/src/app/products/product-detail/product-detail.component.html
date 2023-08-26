@@ -1,0 +1,121 @@
+<div fxLayout="row" fxLayoutAlign="space-around  center">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{product!=undefined?product.Name:''}} - {{product!=undefined?product.Code:''}}</mat-card-title>
+      <mat-card-subtitle>{{product!=undefined?product.Description:''}}</mat-card-subtitle>
+    </mat-card-header>
+    <img class="imageProduct" mat-card-image src="{{product!=undefined?product.Image:''}}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z2">
+          <ng-container matColumnDef="Position">
+            <th mat-header-cell *matHeaderCellDef> No.</th>
+            <td mat-cell *matCellDef="let element; let i = index"> {{i+1}} </td>
+          </ng-container>
+
+          <!-- Code Column -->
+          <ng-container matColumnDef="Code">
+            <th mat-header-cell *matHeaderCellDef> Code </th>
+            <td mat-cell *matCellDef="let element"> {{element.Code}} </td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="Name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
+          </ng-container>
+
+          <!-- Description Column -->
+          <ng-container matColumnDef="Description">
+            <th mat-header-cell *matHeaderCellDef> Description </th>
+            <td mat-cell *matCellDef="let element"> {{element.Description}} </td>
+          </ng-container>
+
+          <!-- Optional Column -->
+          <ng-container matColumnDef="Optional">
+            <th mat-header-cell *matHeaderCellDef> Optional </th>
+            <td mat-cell *matCellDef="let element">
+              <mat-checkbox [(ngModel)]="element.Optional" [disabled]="true"></mat-checkbox>
+            </td>
+          </ng-container>
+
+          <!-- SumInsured Column -->
+          <ng-container matColumnDef="SumInsured">
+            <th mat-header-cell *matHeaderCellDef> Sum Insured </th>
+            <td mat-cell *matCellDef="let element"> {{element.SumInsured}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[2]"></mat-paginator>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <form class="example-form" [formGroup]="policyForm" (ngSubmit)="submit(policyForm)" novalidate>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Enter the data needed to calculate the price</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div fxLayout="column" fxLayoutAlign="space-between stretch">
+          <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="24px">
+            <mat-form-field fxFlex="50">
+              <mat-label>Policy from</mat-label>
+              <input matInput [matDatepicker]="PolicyFrom" formControlName="PolicyFrom">
+              <mat-datepicker-toggle matSuffix [for]="PolicyFrom"></mat-datepicker-toggle>
+              <mat-datepicker #PolicyFrom></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field fxFlex="50">
+              <mat-label>Policy to</mat-label>
+              <input matInput [matDatepicker]="PolicyTo" formControlName="PolicyTo">
+              <mat-datepicker-toggle matSuffix [for]="PolicyTo"></mat-datepicker-toggle>
+              <mat-datepicker #PolicyTo></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div *ngIf="product!=undefined" formArrayName="QuestionsAnswersControls">
+            <div *ngFor="let questionAnswer of QuestionsAnswersControls.controls; index as idx">
+              <div *ngIf="product.Questions[idx].QuestionType==='Numeric'">
+                <mat-form-field fxFill>
+                  <mat-label>{{product.Questions[idx].Text}}</mat-label>
+                  <input matInput type="number" [formControlName]="idx">
+                </mat-form-field>
+              </div>
+              <div *ngIf="product.Questions[idx].QuestionType==='Choice'">
+                <mat-form-field fxFill>
+                  <mat-label>{{product.Questions[idx].Text}}</mat-label>
+                  <mat-select [formControlName]="idx">
+                    <mat-option *ngFor="let choice of product.Questions[idx].Choices" [value]="choice.Code">
+                      {{choice.Label}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="IsReadOnly()">
+            <mat-form-field fxFill>
+              <mat-label>Price</mat-label>
+              <input matInput type="number" value="{{offer.TotalPrice}}" disabled="disabled">
+              <mat-icon matSuffix>euro_symbol</mat-icon>
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions fxLayout="row" fxLayoutAlign="center center">
+        <div *ngIf="IsReadOnly()">
+          <a mat-raised-button [routerLink]="['/policies/fromOffer',offer.OfferNumber]" color="primary">BUY</a>
+          <a mat-button (click)="changeParameters()" color="primary" >CHANGE PARAMETERS</a>
+        </div>
+        <div *ngIf="!IsReadOnly()">
+          <button mat-raised-button color="primary">CALCULATE PRICE</button>
+        </div>
+        <a mat-button [routerLink]="['../','list']">BACK</a>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</div>

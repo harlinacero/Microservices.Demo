@@ -1,0 +1,173 @@
+version: '3.4'
+
+services:
+########################################################## microservices.demo.discoveryserver #############################################################################
+  microservices.demo.discoveryserver:
+    image: ${DOCKER_REGISTRY-}microservicesdemodiscoveryserver
+    container_name: Microservices.Demo.DiscoveryServer
+    mem_limit: 256m
+    mem_reservation: 128M
+    cpus: 0.25
+    ports:
+       - 8761:8761
+    environment:
+       - OTEL_SERVICE_NAME=Microservices.Demo.DiscoveryServer
+       - OTEL_EXPORTER_OTLP_ENDPOINT=http://microservices.demo.jaeger:4317
+    build:
+      context: app/Infrastructure/Microservices.Demo.DiscoveryServer
+      dockerfile: Dockerfile
+    networks:
+      - backend
+########################################################## microservices.demo.configserver ################################################################################
+  microservices.demo.configserver:
+    image: ${DOCKER_REGISTRY-}microservicesdemoconfigserver
+    container_name: Microservices.Demo.ConfigServer
+    mem_limit: 256m
+    mem_reservation: 128M
+    cpus: 0.25
+    ports:
+       - 8889:8889
+    environment:
+       - OTEL_SERVICE_NAME=Microservices.Demo.ConfigServer
+       - OTEL_EXPORTER_OTLP_ENDPOINT=http://microservices.demo.jaeger:4317
+    build:
+      context: app/Infrastructure/Microservices.Demo.ConfigServer
+      dockerfile: Dockerfile
+    networks:
+      - backend
+########################################################## microservices.demo.rabbitmq ####################################################################################
+  microservices.demo.rabbitmq:
+    image: rabbitmq:3-management
+    container_name: Microservices.Demo.Rabbitmq
+    mem_limit: 256m
+    mem_reservation: 128M
+    cpus: 0.25
+    ports:
+       - 15672:15672
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin    
+    networks:
+      - backend
+########################################################## microservices.demo.client.web.apigateway ######################################################################
+  microservices.demo.client.web.apigateway:
+    image: ${DOCKER_REGISTRY-}microservicesdemoclientwebapigateway
+    container_name: Microservices.Demo.Client.Web.ApiGateway
+    mem_limit: 256m
+    mem_reservation: 128M
+    cpus: 0.25
+    environment:      
+      - ASPNETCORE_URLS=http://::80
+    ports:
+      - 44399:80
+    build:
+      context: app/Infrastructure/Microservices.Demo.Client.Web.ApiGateway
+      dockerfile: Dockerfile
+    networks:
+      - backend
+    restart: on-failure
+########################################################## microservices.demo.auth.api ###################################################################################
+  microservices.demo.auth.api:
+    image: ${DOCKER_REGISTRY-}microservicesdemoauthapi
+    container_name: Microservices.Demo.Auth.Api
+    mem_limit: 256m
+    mem_reservation: 128M
+    cpus: 0.25
+    environment:      
+      - ASPNETCORE_URLS=http://::80
+    ports:
+      - 80      
+    build:
+      context: app/Infrastructure/Microservices.Demo.Auth.API
+      dockerfile: Dockerfile
+    networks:
+      - backend
+    restart: on-failure
+######################################################################### elastic search ##################################################################################
+##http://localhost:9200/_cat/nodes?v=true&pretty
+  microservices.demo.elasticsearch:
+    container_name: microservices.demo.elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.5.2
+    ports:
+      - 9200:9200 
+      - 9300:9300
+    environment:
+      - node.name=es01-test
+      - cluster.name=es-docker-cluster
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g      
+      - xpack.security.enabled=false
+      - xpack.security.authc.api_key.enabled=true
+    volumes:
+      - ./app/infrastructure/elk/microservices.demo.elasticsearch/data:/usr/share/elasticsearch/data
+    networks:
+      - backend  
+################################################################################# kibana ##################################################################################      
+  microservices.demo.kibana:
+    container_name: microservices.demo.kibana
+    image: docker.elastic.co/kibana/kibana:8.5.2    
+    ports:
+      - 5601:5601
+    environment:
+      - ELASTICSEARCH_HOSTS=["http://microservices.demo.elasticsearch:9200"]
+    networks:
+      - backend
+    depends_on:
+      - microservices.demo.elasticsearch    
+######################################################################### logstash ##################################################################################
+  microservices.demo.logstash:
+    container_name: microservices.demo.logstash
+    image: docker.elastic.co/logstash/logstash:8.5.2
+    ports:
+      - 5044:5044
+      - 28080:28080
+    volumes:
+      - ./app/infrastructure/elk/microservices.demo.logstash/conf.d/:/usr/share/logstash/pipeline/:ro
+    networks:
+      - backend
+    depends_on:
+      - microservices.demo.elasticsearch
+    restart: on-failure
+######################################################################### APM ##################################################################################
+  microservices.demo.apm-server:
+    container_name: microservices.demo.apm-server
+    build:
+      context: ./app/infrastructure/elk/microservices.demo.apm-server
+      dockerfile: Dockerfile
+    image: apm-server
+    ports:
+      - 8200:8200  
+    environment:
+      - strict.perms=false
+      - output.elasticsearch.hosts=["microservices.demo.elasticsearch:9200"]    
+    networks:
+      - backend
+    depends_on:
+      - microservices.demo.elasticsearch
+    restart: on-failure
+######################################################################### jaeger ##################################################################################
+  microservices.demo.jaeger:
+    container_name: microservices.demo.jaeger
+    image: jaegertracing/all-in-one:1.40
+    ports:      
+      - 6831:6831/udp
+      - 6832:6832/udp
+      - 5778:5778
+      - 16686:16686
+      - 4317:4317
+      - 4318:4318
+      - 14250:14250
+      - 14268:14268
+      - 14269:14269
+      - 9411:9411
+    environment:      
+      - COLLECTOR_ZIPKIN_HOST_PORT=:9411
+      - COLLECTOR_OTLP_ENABLED=true
+    networks:
+      - backend    
+    restart: on-failure
+########################################################## networks #######################################################################################################
+networks:
+  backend:
+    name: backend
+    driver: bridge

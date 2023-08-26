@@ -1,0 +1,18 @@
+
+.\docker-compose-net.ps1
+
+docker-compose -f .\docker-compose-infr.yml build
+docker-compose -f .\docker-compose-infr.yml up -d
+
+docker-compose -f .\docker-compose-db.yml build
+docker-compose -f .\docker-compose-db.yml up -d
+
+docker-compose build
+docker-compose up
+
+
+
+dotnet dev-certs https --clean
+dotnet dev-certs https -t
+
+

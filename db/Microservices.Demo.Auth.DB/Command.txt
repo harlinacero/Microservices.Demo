@@ -1,0 +1,9 @@
+﻿En una consola powershell
+cd D:\GitHub\Microservices.Demo\db\Microservices.Demo.Auth.DB\MongoDB
+mongod --dbpath D:\GitHub\Microservices.Demo\db\Microservices.Demo.Auth.DB\MongoDB
+
+En otra consola para validar los datos
+cd D:\GitHub\Microservices.Demo\db\Microservices.Demo.Auth.DB\MongoDB
+mongo
+use SecurityDB
+db.getCollection("Users").find().pretty()

@@ -1,0 +1,1 @@
+create database "Microservices.Demo.Pricing";

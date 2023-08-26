@@ -1,0 +1,50 @@
+<div fxLayout="row" fxLayoutAlign="space-around  center">
+  <mat-card class="policy-card">
+    <form [formGroup]="policyForm" (ngSubmit)="submit(policyForm)" novalidate>
+      <mat-card-header>
+        <div mat-card-avatar class="policy-header-image"></div>
+        <mat-card-title>Enter the data needed to calculate the price</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="policy-card-content" fxLayoutGap="24px">
+          <mat-form-field fxFill>
+            <mat-label>First Name</mat-label>
+            <input matInput type="text" formControlName="FirstName">
+          </mat-form-field>
+          <mat-form-field fxFill>
+            <mat-label>Last Name</mat-label>
+            <input matInput type="text" formControlName="LastName">
+          </mat-form-field>
+          <mat-form-field fxFill>
+            <mat-label>Tax Id</mat-label>
+            <input matInput type="text" formControlName="TaxId">
+          </mat-form-field>
+          <mat-form-field fxFill>
+            <mat-label>Country</mat-label>
+            <mat-select formControlName="Country">
+              <mat-option *ngFor="let country of Countries" [value]="country">
+                {{country}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field fxFill>
+            <mat-label>Zip Code</mat-label>
+            <input matInput type="text" formControlName="ZipCode">
+          </mat-form-field>
+          <mat-form-field fxFill>
+            <mat-label>City</mat-label>
+            <input matInput type="text" formControlName="City">
+          </mat-form-field>
+          <mat-form-field fxFill>
+            <mat-label>Street</mat-label>
+            <input matInput type="text" formControlName="Street">
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions fxLayout="row" fxLayoutAlign="center center">
+        <button mat-raised-button color="primary">CONFIRM</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>

@@ -1,0 +1,34 @@
+<div>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <td>Policy Id</td>
+                <td>Number</td>
+                <td>Agent Login</td>
+                <td>Policy StatusId</td>
+                <td>Creation Date</td>
+                <td>Product Code</td>
+                <td>Product Name</td>
+                <td>Product Image</td>
+                <td>Product Description</td>
+                <td>Max Number Of Insured</td>
+                <td>Product Status Id</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let policy of policies">
+                <td>{{policy.policyId}}</td>
+                <td>{{policy.number}}</td>
+                <td>{{policy.agentLogin}}</td>
+                <td>{{policy.policyStatusId}}</td>
+                <td>{{policy.creationDate}}</td>
+                <td>{{policy.productCode}}</td>
+                <td>{{policy.productName}}</td>
+                <td>{{policy.productImage}}</td>
+                <td>{{policy.productDescription}}</td>
+                <td>{{policy.maxNumberOfInsured}}</td>
+                <td>{{policy.productStatusId}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

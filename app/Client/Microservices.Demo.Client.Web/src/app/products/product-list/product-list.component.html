@@ -1,0 +1,5 @@
+<div fxLayout="row wrap" fxLayoutAlign="space-around center">
+  <div *ngFor="let product of products; let i = index" class="card">
+    <app-product-card [product]="product"></app-product-card>
+  </div>
+</div>
