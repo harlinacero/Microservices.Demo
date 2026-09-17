@@ -3,19 +3,19 @@
 spring:
   application:
     name: Microservices.Demo.ConfigServer
-  cloud:    
+  cloud:
     config:
       server:
         git:
-          uri: https://github.com/harlinacero/Microservices-Config-Repository.git
+          uri: https://github.com/harlinacero/Microservices.Demo-config.git
           search-paths:
-            - '{application}'
-          defaultLabel: master
+            - "{application}"
+          defaultLabel: main
 eureka:
   instance:
     appName: Microservices.Demo.ConfigServer
     hostname: microservices.demo.configserver
-#    prefer-ip-address: true
+  #    prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://microservices.demo.discoveryserver:8761/eureka/

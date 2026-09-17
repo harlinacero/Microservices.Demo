@@ -1,27 +1,38 @@
-# MicroservicesDemoClientWeb
+# Microservices.Demo.Client.Web
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
+Cliente web Angular 14 para la demo. Presenta la autenticación y las operaciones de productos, precios, pólizas y reportes. Sus servicios HTTP llaman al API Gateway, no directamente a cada microservicio.
 
-## Development server
+## Ejecución
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+En desarrollo:
 
-## Code scaffolding
+```powershell
+npm install
+npm start
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+La aplicación queda en `http://localhost:4200`. En Docker se sirve mediante Nginx en `http://localhost:8081`.
 
-## Build
+```powershell
+docker-compose -f ..\..\..\docker-compose-app.yml build microservices.demo.client.web
+docker-compose -f ..\..\..\docker-compose-app.yml up -d microservices.demo.client.web
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+El Gateway debe estar disponible en `http://localhost:44399` y las bases y APIs deben estar levantadas.
 
-## Running unit tests
+## Estructura funcional
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- `src/app/services`: clientes HTTP para autenticación y los dominios de negocio.
+- `src/app/guards`: protección de rutas según el estado de autenticación.
+- `src/assets`: imágenes y recursos estáticos.
+- `src/environments`: configuración de compilación Angular.
 
-## Running end-to-end tests
+## Comandos
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```powershell
+npm start
+npm run build
+npm test -- --watch=false --browsers=ChromeHeadless
+```
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Si el navegador muestra errores de red, comprobar primero el Gateway en `http://localhost:44399` y revisar `docker logs Microservices.Demo.Client.Web.ApiGateway`.
