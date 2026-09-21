@@ -1,5 +1,6 @@
-#wait for the SQL Server to come up
-#Save in Unix(LF) format
+# Wait for SQL Server to come up. The current image ships sqlcmd under
+# mssql-tools18.
 sleep 90s
-#run the setup script to create the DB and the schema in the DB
-/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Password1234 -d master -i /var/opt/sqlserver/SqlCmdScript.sql
+
+# Fail the setup process if the database attach or schema script fails.
+/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P "$SA_PASSWORD" -d master -C -b -i /var/opt/sqlserver/SqlCmdScript.sql

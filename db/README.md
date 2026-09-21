@@ -1,6 +1,8 @@
-# Bases de datos
+# Microservices.Demo.Database
 
-Cada bounded context tiene una base separada. Las imágenes se construyen con `docker-compose-db.yml` y todos los contenedores se conectan a la red `backend`.
+Este directorio contiene los proyectos de persistencia de la plataforma Microservices.Demo. Cada bounded context tiene una base separada para evitar que un servicio dependa directamente de las tablas o colecciones de otro.
+
+Las bases se ejecutan como contenedores Docker y se conectan a la red `backend`; las APIs usan los nombres de servicio de Compose como host. Este directorio no contiene lógica de negocio de los APIs.
 
 ## Servicios
 
@@ -16,6 +18,12 @@ Cada bounded context tiene una base separada. Las imágenes se construyen con `d
 ```powershell
 docker-compose -f ..\docker-compose-db.yml build
 docker-compose -f ..\docker-compose-db.yml up -d
+```
+
+Para detenerlas sin eliminar los datos:
+
+```powershell
+docker-compose -f ..\docker-compose-db.yml stop
 ```
 
 ## Inicialización

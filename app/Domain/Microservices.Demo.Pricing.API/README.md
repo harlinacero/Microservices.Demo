@@ -29,3 +29,14 @@ docker-compose -f ..\..\..\docker-compose-all.yml up -d microservices.demo.prici
 ```
 
 Inicia PostgreSQL con `docker-compose-db.yml` antes del servicio.
+
+## Ejecución local
+
+Requiere el SDK de .NET 6. Con PostgreSQL, Config Server y Eureka disponibles, ejecuta desde esta carpeta:
+
+```powershell
+dotnet restore
+dotnet run
+```
+
+Pricing API cargará su conexión a PostgreSQL desde Config Server y se registrará en Eureka. Policy normalmente lo consume por descubrimiento; para el flujo público utiliza el Gateway.

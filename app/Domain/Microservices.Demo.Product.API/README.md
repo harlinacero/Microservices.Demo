@@ -35,3 +35,14 @@ docker-compose -f ..\..\..\docker-compose-all.yml up -d microservices.demo.produ
 ```
 
 La base debe estar disponible antes de iniciar el API.
+
+## Ejecución local
+
+Requiere el SDK de .NET 6. Arranca primero Product DB, Config Server y Eureka; después ejecuta desde esta carpeta:
+
+```powershell
+dotnet restore
+dotnet run
+```
+
+El API usa la configuración externa para conectarse a SQL Server y registrarse en Eureka. Para una prueba completa, accede a sus rutas mediante el Gateway en `http://localhost:44399`.

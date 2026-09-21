@@ -1,15 +1,28 @@
 # Observabilidad: ELK, APM y Jaeger
 
-Esta carpeta agrupa los componentes transversales de logs, trazas y métricas.
+Esta carpeta contiene las herramientas que permiten saber qué ocurre dentro de los microservicios sin tener que conectarse a cada contenedor por separado. La observabilidad de esta demo tiene tres señales:
 
-## Componentes
+- **Logs**: mensajes de aplicación y eventos HTTP.
+- **Trazas**: recorrido de una petición entre servicios.
+- **Métricas/APM**: tiempos, errores, transacciones y rendimiento.
 
-- `Microservices.Demo.Elasticsearch`: almacenamiento de logs y datos APM, imagen `docker.elastic.co/elasticsearch/elasticsearch:8.5.2`, puerto `9200`.
-- `Microservices.Demo.Kibana`: interfaz de consulta y visualización, imagen `docker.elastic.co/kibana/kibana:8.5.2`, puerto `5601`.
-- `Microservices.Demo.Logstash`: recibe JSON por HTTP en `28080` y escribe el índice `ms-services-logs` en Elasticsearch. La configuración está en `conf.d/logstash.conf`.
-- `Microservices.Demo.Apm-Server`: recibe eventos APM en `8200` y los envía a Elasticsearch. Su imagen actual es `7.15.2`.
+## Flujo de datos
 
-Jaeger no tiene un proyecto de código en esta carpeta; se ejecuta desde Compose con `jaegertracing/all-in-one:1.40` y su UI está en `http://localhost:16686`.
+```text
+APIs .NET/Java --logs HTTP:28080--> Logstash --> Elasticsearch --> Kibana
+APIs .NET/Java --APM:8200-------> APM Server --> Elasticsearch
+APIs .NET/Java --tracing--------> Jaeger --> Jaeger UI
+```
+
+## ¿Para qué sirve cada componente?
+
+| Componente    | Propósito                                                                      |
+| ------------- | ------------------------------------------------------------------------------ |
+| Elasticsearch | Guarda e indexa logs y eventos para poder buscarlos rápidamente.               |
+| Logstash      | Recibe, transforma y enruta los logs hacia Elasticsearch.                      |
+| Kibana        | Permite buscar logs, crear filtros, gráficos y dashboards sobre Elasticsearch. |
+| APM Server    | Recibe telemetría de rendimiento y errores de los agentes APM.                 |
+| Jaeger        | Muestra trazas distribuidas: una petición y sus llamadas internas.             |
 
 ## Arranque
 
@@ -17,8 +30,22 @@ Jaeger no tiene un proyecto de código en esta carpeta; se ejecuta desde Compose
 docker-compose -f ..\..\..\docker-compose-infr.yml up -d microservices.demo.elasticsearch microservices.demo.logstash microservices.demo.apm-server microservices.demo.jaeger microservices.demo.kibana
 ```
 
-Los APIs .NET y Java envían logs a `microservices.demo.logstash:28080` y trazas/métricas según sus variables OpenTelemetry y configuración APM.
+## Cómo investigar un problema
 
-## Advertencias
+1. Comprueba que el contenedor que origina el evento esté activo.
+2. Busca sus logs con `docker logs <contenedor>`.
+3. En Kibana usa una Data View con el patrón exacto `ms-services-logs` y `@timestamp` como campo temporal.
+4. En Jaeger busca por nombre de servicio y revisa la duración de cada llamada.
+5. En APM revisa errores y transacciones lentas.
 
-El stack mezcla Elasticsearch/Kibana/Logstash `8.5.2` con APM Server `7.15.2`. Para un entorno mantenible conviene usar versiones compatibles y configurar seguridad fuera de los valores de demo.
+## Puertos
+
+- Kibana: `http://localhost:5601`.
+- Elasticsearch: `http://localhost:9200`.
+- APM Server: `http://localhost:8200`.
+- Jaeger UI: `http://localhost:16686`.
+- Logstash HTTP: `28080`.
+
+El stack mezcla Elasticsearch/Kibana/Logstash `8.5.2` con APM Server `7.15.2`. Para producción conviene alinear versiones, habilitar seguridad y proteger los datos.
+
+Si Discover muestra un error sobre un índice `apm-*`, cambia a la Data View exclusiva de logs. Un patrón que mezcle `ms-services-logs` con APM puede fallar aunque el índice de logs esté disponible.
